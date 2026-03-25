@@ -1,3 +1,48 @@
-I plan to make a webshop for collecting/painting miniatures, mainly warhammer.
+I plan to make a webshop (international if I have time) for collecting/painting miniatures, mainly warhammer and all supplies needed i.e paints, brushes etc.
+Ideally I will use external libraries for the language and currencies , "Dinero.js" and "i18next" along side "motion.dev" for animations.
+I am going to make my own Database using Supabase.
 
+1. Decide which states to have:
+    Drop down menu -- In the Header component.
+    Shoppingcart -- App.jsx, would want to be able to access it / update it from every page (adding quantity / removing quantity).
+    DisplayCart -- Header.jsx, The cart icon will be inside the Header
+    CartTotal -- Cart.jsx, as the state will only change based on the contents of the Cart component
+    *Login (if able / time permits) -- App.jsx, affects the cart since it will remember your cart state upon login.
+    Language -- App.jsx, affects whole website.
+    Currency -- App.jsx, affects whole website.
+    *Search function -- App.jsx, since I am searching across the whole site, not just individual pages
+
+2. Based on the states, what will need useEffect:
+    Calculating price based on the cart contents.
+      *If possible and time allows, useEffect when cart reaches a certain price either a discount or free shipping.
+    Currency, useEffect to change currency state when the language state changes.
+    *Search function, since I am using an API, useEffect to re-load the API each time the search field updates.
+  
+3. Components I initially think I need:
+    Header
+    Navigation
+    Logo
+    *Login
+    *SearchBar
+    LanguageCurrency
+    DropDownMenu
+    ShoppingCart
+    CartItem
+    SideBar
+    ProductDisplay
+    ProductCard
+    *ProductSales
+    AccountSetUp
+    Socials
+    Footer
+
+4. Pages(Parent Routes):
+    Home
+    Products
+    About
+    Checkout
+    *MyAccount(If I make a login)
+
+5. Subpages(Child Routes):
+    ProductInformation(Products)
 
