@@ -36,18 +36,20 @@ I am going to make my own Database using Supabase.
     Socials
     Footer
 
-4. Pages(Parent Routes):
-    Home
-    Products
-    About
-    Checkout
-    *MyAccount(If I make a login)
+4. Pages:
+    Home(Route)
+    Products(Route)
+    About(Route)
+    Checkout(Route)
+    *MyAccount(If I make a login / Route)
     Layout
 
-5. Subpages(Child Routes):
-    ProductInformation(Products)
+5. Subpages:
+    ProductInformation(Products subroute)
+    CreateAccount(maybe)
 
-Start by making top level routes (Home, Products, About etc), using dynamic routing and params along side creating the Database.
+Think of a design, alongside root colors for each element I want to color.
+Make top level routes (Home, Products, About etc), using dynamic routing and params along side creating the Database.
 Create the core Layout alongside the components that exist on all pages and import it to all top level pages, and remember to use Outlet.
   .Header
   .Navigation
