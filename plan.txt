@@ -32,7 +32,7 @@ I am going to make my own Database using Supabase.
     ProductDisplay
     ProductCard
     *ProductSales
-    AccountSetUp
+    *AccountSetUp
     Socials
     Footer
 
@@ -42,7 +42,19 @@ I am going to make my own Database using Supabase.
     About
     Checkout
     *MyAccount(If I make a login)
+    Layout
 
 5. Subpages(Child Routes):
     ProductInformation(Products)
+
+Start by making top level routes (Home, Products, About etc), using dynamic routing and params along side creating the Database.
+Create the core Layout alongside the components that exist on all pages and import it to all top level pages, and remember to use Outlet.
+  .Header
+  .Navigation
+  .DropDown
+  .ShoppingCart
+  .SideBar(undecided if it will exist on all pages)
+  .Footer
+Create the client for my project to connect to the Supabase API (use .env for the API and KEY).
+
 
