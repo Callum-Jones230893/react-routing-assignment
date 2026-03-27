@@ -1,0 +1,13 @@
+.navigationWrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.navItem {
+  display: block;
+  height: 100%;
+  border-left: 1px solid #1a3a1a;
+  color: #8a9a7a;
+  padding: 8px 18px;
+  text-decoration: none;
+}

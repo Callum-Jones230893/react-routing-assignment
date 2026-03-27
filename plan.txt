@@ -48,7 +48,7 @@ I am going to make my own Database using Supabase.
     ProductInformation(Products subroute)
     CreateAccount(maybe)
 
-Think of a design, alongside root colors for each element I want to color.
+Think of a design, alongside root colors for each element I want to color. (Make each component responsive as I go)
 Make top level routes (Home, Products, About etc), using dynamic routing and params along side creating the Database.
 Create the core Layout alongside the components that exist on all pages and import it to all top level pages, and remember to use Outlet.
   .Header
@@ -58,5 +58,8 @@ Create the core Layout alongside the components that exist on all pages and impo
   .SideBar(undecided if it will exist on all pages)
   .Footer
 Create the client for my project to connect to the Supabase API (use .env for the API and KEY).
-
-
+Fetch the data and display it dynamically on the components that require the information.
+Finish the remainign components.
+Fill out the pages with the remaining components that are not universal to each page.
+Impliment the language/currency states as it's a want not a need.
+Try to add login/accounts to store cart information based on user.

@@ -1,0 +1,26 @@
+.sideBarWrapper {
+  background: #080e08;
+  border-right: 2px solid #1a3a1a;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 0;
+  width: 210px;
+}
+
+.navItem {
+  color: inherit;
+}
+
+.navItem a {
+  text-decoration: none;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 32px;
+  justify-content: flex-end;
+  margin-bottom: 38px;
+}

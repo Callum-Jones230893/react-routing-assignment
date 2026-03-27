@@ -1,0 +1,14 @@
+.productTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin: 16px;
+}
+
+.productCard {
+  background-color: rgba(168, 102, 82, 0.712);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: calc(25% - 10px);
+  padding: 24px;
+}

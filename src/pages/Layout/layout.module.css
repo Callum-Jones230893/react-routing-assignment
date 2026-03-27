@@ -1,0 +1,13 @@
+.layoutWrapper {
+  height: 100vh;
+}
+
+.mainContent {
+  display: flex;
+}
+
+.pageContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}

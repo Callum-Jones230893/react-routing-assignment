@@ -1,18 +1,29 @@
+import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import About from './pages/About'
+import Checkout from './pages/Checkout'
+import Account from './pages/Account'
+import ProductInformation from './pages/Products/ProductInformation'
 
 function App() {
+  const [shoppingCart, setShoppingCart] = useState(null)
+
   return (
     <Routes>
-      <Route path="/" element="" />
-      <Route path="/products" element="">
-        <Route path=":id" element="" />
+      <Route path="/" element={<Home />} />
+      <Route path="/products" element={<Products />}>
+        <Route path=":category" element={null} />
+        <Route path=":category/:id" element={<ProductInformation />} />
       </Route>
-      <Route path="/about" element="" />
-      <Route path="/checkout" element="" />
-      <Route path="/account" element="" />
+      <Route path="/about" element={<About />} />
+      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/account" element={<Account />} />
     </Routes>
   )
 }
 
 export default App
+
