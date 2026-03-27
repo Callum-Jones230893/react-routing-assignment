@@ -1,5 +1,15 @@
+:root {
+  --background-primary: #091409;
+  --background-secondary: #0d1f0d;
+  --background-tertiary: #080e08;
+
+  --border-primary: #2a5a2a;
+  --border-secondary: #1a3a1a;
+}
+
 html,
 body {
+  background-color: var(--background-primary);
   box-sizing: border-box;
   color: white;
   margin: 0;
@@ -9,11 +19,4 @@ body {
 #root {
   margin: 0 auto;
   min-height: 100vh;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
 }

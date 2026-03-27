@@ -5,20 +5,24 @@ import { NavLink } from "react-router-dom"
 const SideBar = () => {
   return (
     <div className={styles.sideBarWrapper}>
-      <div>
-        <span>placeholder for army icons</span>
+      <div className={styles.sideBarSection}>
+        <div className={styles.sideBarItem}>placeholder for army icons</div>
       </div>
-      {categories.map((navigation, index) => 
-        <div className={styles.navItem} key={index}>
-          <NavLink to={`/products/${navigation.value}`}>{navigation.name}</NavLink>
+      <div className={styles.sideBarSection}>
+        {categories.map((navigation, index) => 
+          <div className={styles.navItem} key={index}>
+            <NavLink to={`/products/${navigation.value}`}>{navigation.name}</NavLink>
+          </div>
+        )}
+      </div>
+      <div className={styles.sideBarSection}>
+        <div className={styles.sideBarItem}>filter by prices placeholder</div>
+      </div>
+      <div className={styles.sideBarSection}>
+        <div className={styles.iconContainer}>
+          <span>Cart Placeholder</span>
+          <span>Login Placeholder</span>
         </div>
-      )}
-      <div>
-        <span>filter by prices placeholder</span>
-      </div>
-      <div className={styles.iconContainer}>
-        <span>Cart Placeholder</span>
-        <span>Login Placeholder</span>
       </div>
     </div>
   )

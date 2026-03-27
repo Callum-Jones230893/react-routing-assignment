@@ -14,8 +14,7 @@ const Header = () => {
         <div className={styles.titleWrapper}>
           <h1 className={styles.title}>Welcome</h1>
         </div>
-          <Navigation />
-        <ShoppingCart />
+        <Navigation />
       </div>
     </>
   )

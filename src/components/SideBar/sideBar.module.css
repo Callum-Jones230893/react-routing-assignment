@@ -1,11 +1,23 @@
 .sideBarWrapper {
-  background: #080e08;
-  border-right: 2px solid #1a3a1a;
+  background: var(--background-tertiary);
+  border-right: 2px solid var(--border-secondary);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   padding: 0;
   width: 210px;
+}
+
+.sideBarSection {
+  border-bottom: 1px solid var(--border-secondary);
+  padding: 14px 16px;
+}
+
+.sideBarItem {
+  border-bottom: 1px dotted var(--border-primary);
+  cursor: pointer;
+  display: flex;
+  padding: 5px 0;
 }
 
 .navItem {

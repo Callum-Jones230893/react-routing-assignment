@@ -15,9 +15,7 @@ const ProductDisplay = () => {
 
   return (
     <div className={styles.displayWrapper}>
-      <div>
         <h3>{allProducts[0]?.category}</h3>
-      </div>
       <div className={styles.displayInnerWrapper}>
         {filteredProducts.map(product => (
           <ProductCard key={product.id} product={product} />

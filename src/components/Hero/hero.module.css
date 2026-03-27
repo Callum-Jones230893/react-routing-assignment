@@ -1,7 +1,7 @@
 .heroWrapper {
   align-items: center;
-  background: #091409;
-  border-bottom: 2px solid #1a3a1a;
+  background: var(--background-primary);
+  border-bottom: 2px solid var(--border-secondary);
   display: grid;
   flex: 1;
   grid-template-columns: 1fr 1fr;
@@ -18,8 +18,8 @@
 }
 
 .sideCard {
-  background: #0d1f0d;
-  border: 1px solid #2a5a2a;
+  background: var(--background-secondary);
+  border: 1px solid var(--border-primary);
   display: flex;
   height: 50%;
   padding: 20px;

@@ -5,7 +5,8 @@
 }
 
 .productCard {
-  background-color: rgba(168, 102, 82, 0.712);
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-primary);
   display: flex;
   flex-direction: column;
   height: auto;

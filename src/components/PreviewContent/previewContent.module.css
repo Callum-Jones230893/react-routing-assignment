@@ -1,5 +1,5 @@
 .previewWrapper {
-  background: #0b1a0b;
+  background: var(--background-secondary);
   display: flex;
   flex-direction: column;
   flex: 1;
