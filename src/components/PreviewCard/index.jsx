@@ -44,4 +44,6 @@ const PreviewCard = () => {
   )
 }
 
+// randomize 4 products, map over them and then display. So only code it once with a map function
+
 export default PreviewCard

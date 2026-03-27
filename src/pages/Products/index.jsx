@@ -5,10 +5,10 @@ import ProductDisplay from "../../components/ProductDisplay"
 const Products = () => {
 
   return (
-    <Layout>
+    <>
       <ProductDisplay />
       <Outlet />
-    </Layout>
+    </>
   )
 }
 

@@ -6,10 +6,8 @@ const Home = () => {
 
   return (
     <>
-      <Layout>
-        <MainContent />
-        <Outlet />
-      </Layout>
+      <MainContent />
+      <Outlet />
     </>
   )
 }

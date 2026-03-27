@@ -1,7 +1,10 @@
+import { ArrowFatLinesDownIcon, ArrowFatLinesUpIcon } from "@phosphor-icons/react"
+import styles from "./dropDownMenu.module.css"
+
 const DropDownMenu = () => {
   return (
-    <div>
-
+    <div className={styles.dropDownWrapper}>
+      <ArrowFatLinesDownIcon size={32} />
     </div>
   )
 }

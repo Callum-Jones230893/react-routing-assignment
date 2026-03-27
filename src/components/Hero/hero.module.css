@@ -1,6 +1,6 @@
 .heroWrapper {
   align-items: center;
-  background: var(--background-primary);
+  background: var(--background-tertiary);
   border-bottom: 2px solid var(--border-secondary);
   display: grid;
   flex: 1;
