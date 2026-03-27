@@ -3,14 +3,26 @@
   background: #091409;
   border-bottom: 2px solid #1a3a1a;
   display: grid;
-  grid-template-columns: 1fr 200px;
+  flex: 1;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   padding: 30px 36px;
+}
+
+.mainCardWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
 }
 
 .sideCard {
   background: #0d1f0d;
   border: 1px solid #2a5a2a;
+  display: flex;
+  height: 50%;
   padding: 20px;
   text-align: center;
+  width: 30%;
 }

@@ -1,0 +1,15 @@
+.previewContentWrapper {
+  display: grid;
+  flex: 1;
+  gap: 14px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.previewProductCards {
+  align-items: center;
+  background: #0d1f0d;
+  border: 1px solid #2a5a2a;
+  display: flex;
+  flex-direction: column;
+  margin: 5% 10%;
+}

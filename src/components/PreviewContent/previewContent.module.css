@@ -1,5 +1,11 @@
 .previewWrapper {
   background: #0b1a0b;
   display: flex;
+  flex-direction: column;
   flex: 1;
 }
+
+.previewHeader {
+  display: flex;
+}
+
