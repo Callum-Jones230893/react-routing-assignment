@@ -1,14 +1,7 @@
 .navigationWrapper {
+  align-items: center;
   display: flex;
   gap: 15px;
-}
-
-.cartIcon {
-  align-items: center;
-  border-left: 1px solid var(--border-secondary);
-  color: #8a9a7a;
-  display: flex;
-  padding: 8px 18px;
 }
 
 .navItem {
@@ -17,6 +10,14 @@
   color: #8a9a7a;
   display: flex;
   height: 100%;
-  padding: 8px 18px;
+  padding: 13px 18px;
   text-decoration: none;
+}
+
+.cartIcon {
+  border-left: 1px solid var(--border-secondary);
+  color: #8a9a7a;
+  cursor: pointer;
+  display: flex;
+  padding: 8px 18px;
 }
