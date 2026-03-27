@@ -7,7 +7,6 @@ const useProducts = () => {
   const [paints, setPaints] = useState([])
   const [paintingAccessories, setPaintingAccessories] = useState([])
   const [error, setError] = useState(null)
-  const [loading, setLoading] = useState(true)
 
   const fetchData = async () => {
 
@@ -25,15 +24,13 @@ const useProducts = () => {
 
     if (accessories.error) setError(accessories.error)
     else setPaintingAccessories(accessories.data)
-
-    setLoading(false)
   }
 
   useEffect(() => {
     fetchData()
   }, [])
 
-  return { miniatures, paints, paintingAccessories, error, loading }
+  return { miniatures, paints, paintingAccessories, error}
 }
 
 export default useProducts
