@@ -30,7 +30,7 @@ const useProducts = () => {
     fetchData()
   }, [])
 
-  return { miniatures, paints, paintingAccessories, error}
+  return { miniatures, paints, paintingAccessories, error }
 }
 
 export default useProducts
