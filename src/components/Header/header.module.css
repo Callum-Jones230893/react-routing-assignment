@@ -1,7 +1,8 @@
 .headerWrapper {
   align-items: center;
-  background: var(--background-primary);
-  border-bottom: 2px solid var(--border-primary);
+  background: var(--background-one);
+  border-bottom: var(--border-two);
+  color: var(--font-six);
   display: flex;
   height: 100px;
   justify-content: space-between;

@@ -1,7 +1,7 @@
 .heroWrapper {
   align-items: center;
-  background: var(--background-tertiary);
-  border-bottom: 2px solid var(--border-secondary);
+  background: var(--background-one);
+  border-top: 2px solid var(--border-one);
   display: grid;
   flex: 1;
   grid-template-columns: 1fr 1fr;
@@ -14,15 +14,44 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+
+.mainCardInnerWrapper {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  width: 50%;
+}
+
+.newItemsTitle {
+  color: var(--font-two);
+  font-style: italic;
+  letter-spacing: 3px;
+}
+
+.heroTitle {
+  color: var(--font-six);
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.heroInformation {
+  color: var(--font-three);
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 .sideCard {
-  background: var(--background-secondary);
-  border: 1px solid var(--border-primary);
+  background: var(--background-two);
+  border: 1px solid var(--border-three);
   display: flex;
-  height: 50%;
+  height: 80%;
   padding: 20px;
-  text-align: center;
   width: 30%;
+}
+
+.sideCard img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }

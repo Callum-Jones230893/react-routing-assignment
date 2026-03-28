@@ -1,17 +1,27 @@
 :root {
-  --background-primary: #091409;
-  --background-secondary: #0d1f0d;
-  --background-tertiary: #080e08;
+  --background-one: #2a2018;
+  --background-two: #1a1408;
+  --background-three: #ede8de;
+  --background-four: #fdfcf8;
+  --background-images: white;
 
-  --border-primary: #2a5a2a;
-  --border-secondary: #1a3a1a;
+  --border-one: #c8a840;
+  --border-two: #d8d0c0;
+  --border-three: #c8a84040;
+
+  --font-one: #7a5a10;
+  --font-two: #8a6a20;
+  --font-three: #9a8a6a;
+  --font-four: #c8a840;
+  --font-five: #2a2018;
+  --font-six: #f5e6c0;
+
 }
 
 html,
 body {
-  background-color: var(--background-primary);
+  background-color: var(--background-tertiary);
   box-sizing: border-box;
-  color: white;
   margin: 0;
   width: 100%;
 }

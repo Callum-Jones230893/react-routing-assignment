@@ -1,6 +1,6 @@
 .sideBarWrapper {
-  background: var(--background-tertiary);
-  border-right: 2px solid var(--border-secondary);
+  background: var(--background-three);
+  border-right: 1px solid var(--border-one);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -9,12 +9,21 @@
 }
 
 .sideBarSection {
-  border-bottom: 1px solid var(--border-secondary);
+  border-bottom: 1px solid var(--border-two);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+  justify-content: center;
   padding: 14px 16px;
 }
 
+.sideBarSection:nth-child(2) {
+  justify-content: space-evenly;
+}
+
 .sideBarItem {
-  border-bottom: 1px dotted var(--border-primary);
+  border-bottom: 1px dotted var(--border-one);
   cursor: pointer;
   display: flex;
   padding: 5px 0;
@@ -29,10 +38,8 @@
 }
 
 .iconContainer {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  flex: 1;
   gap: 32px;
-  justify-content: flex-end;
-  margin-bottom: 38px;
 }

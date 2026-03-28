@@ -6,8 +6,8 @@
 
 .navItem {
   align-items: center;
-  border-left: 1px solid var(--border-secondary);
-  color: #8a9a7a;
+  border-left: 1px solid var(--border-one);
+  color: var(--font-six);
   display: flex;
   height: 100%;
   padding: 13px 18px;
@@ -15,8 +15,8 @@
 }
 
 .cartIcon {
-  border-left: 1px solid var(--border-secondary);
-  color: #8a9a7a;
+  border-left: 1px solid var(--border-one);
+  color: var(--font-six);
   cursor: pointer;
   display: flex;
   padding: 8px 18px;

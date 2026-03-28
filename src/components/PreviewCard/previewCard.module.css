@@ -7,9 +7,41 @@
 
 .previewProductCards {
   align-items: center;
-  background: var(--background-primary);
-  border: 1px solid var(--border-primary);
+  background: var(--background-one);
+  border: 1px solid var(--border-one);
   display: flex;
   flex-direction: column;
   margin: 5% 10%;
+}
+
+.previewProductCards:hover {
+  
+}
+
+.top {
+  background-color: var(--background-images);
+  display: flex;
+  height: 50%;
+  width: 100%;
+}
+
+.imageWrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.imageWrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.bottom {
+  background-color: var(--background-four);
+  border-top: 1px solid var(--border-one);
+  color: var(--font-five);
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
 }

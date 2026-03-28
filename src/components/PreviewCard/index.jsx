@@ -1,49 +1,28 @@
 import styles from "./previewCard.module.css"
+import randomProduct from "../../utils/randomProduct"
 
 const PreviewCard = () => {
+  const displayedProduct = randomProduct(4)
+
   return (
     <div className={styles.previewContentWrapper}>
-      <div className={styles.previewProductCards}>
-        <div>
-          <img src="" alt="" />
+      {displayedProduct.map((product, index) => (
+        <div className={styles.previewProductCards} key={index}>
+          <div className={styles.top}>
+            <div className={styles.imageWrapper}>
+              {product.image && <img src={product.image} alt={product.name} />}
+            </div>
+          </div>
+          <div className={styles.bottom}>
+            <span>{product.name}</span>
+            <span>{product.price}</span>
+            <span>add to cart</span>
+          </div>
         </div>
-        <span>faction Placeholder</span>
-        <span>product name placeholder</span>
-        <span>price placeholder</span>
-        <span>add to cart</span>
-      </div>
-      <div className={styles.previewProductCards}>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <span>faction Placeholder</span>
-        <span>product name placeholder</span>
-        <span>price placeholder</span>
-        <span>add to cart</span>
-      </div>
-      <div className={styles.previewProductCards}>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <span>faction Placeholder</span>
-        <span>product name placeholder</span>
-        <span>price placeholder</span>
-        <span>add to cart</span>
-      </div>
-      <div className={styles.previewProductCards}>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <span>faction Placeholder</span>
-        <span>product name placeholder</span>
-        <span>price placeholder</span>
-        <span>add to cart</span>
-      </div>
+      ))}
     </div>
 
   )
 }
-
-// randomize 4 products, map over them and then display. So only code it once with a map function
 
 export default PreviewCard

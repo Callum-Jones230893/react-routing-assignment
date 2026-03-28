@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import supabase from "../utils/supabaseClient"
 
 const useProducts = () => {
-
+  
   const [miniatures, setMiniatures] = useState([])
   const [paints, setPaints] = useState([])
   const [paintingAccessories, setPaintingAccessories] = useState([])

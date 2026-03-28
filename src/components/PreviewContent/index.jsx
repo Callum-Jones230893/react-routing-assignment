@@ -5,7 +5,7 @@ const PreviewContent = () => {
   return (
     <div className={styles.previewWrapper}>
       <div className={styles.previewHeader}>
-
+        <h4>Preview</h4>
       </div>
       <PreviewCard />
     </div>
