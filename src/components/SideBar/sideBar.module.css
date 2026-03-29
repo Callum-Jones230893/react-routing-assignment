@@ -24,13 +24,13 @@
 
 .sideBarItem {
   border-bottom: 1px dotted var(--border-one);
-  cursor: pointer;
   display: flex;
   padding: 5px 0;
 }
 
 .navItem {
   color: inherit;
+  cursor: pointer;
 }
 
 .iconContainer {

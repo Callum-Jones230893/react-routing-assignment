@@ -8,7 +8,6 @@ const DropDownMenu = ({menuDisplay, toggleCart, toggleMenu}) => {
     <div className={styles.dropDownWrapper}>
       {!menuDisplay ? <ArrowFatLinesDownIcon size={28} onClick={toggleMenu} />
                     : <ArrowFatLinesUpIcon size={28} onClick={toggleMenu} />}
-      {menuDisplay && (<div className={styles.dropDownOverlay} onClick={toggleMenu}></div>)}
       <div className={`${styles.dropDownContent} ${menuDisplay ? styles.displayDropDown : ``}`}>
         {pages.map((navigation, index) => (
           <div key={index}>

@@ -8,21 +8,22 @@
 
 .shoppingCartContent {
   background-color: var(--background-three);
-  border: 2px red solid;
+  border-left: 1px solid var(--background-one);
   display: flex;
   flex-direction: column;
+  height: calc(100vh - 65px);
   gap: 5px;
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  top: 100px;
-  transform: translateY(-10px);
-  z-index: 11;
+  justify-content: space-evenly;
+  right: 0px;
+  position: fixed;
+  top: 100px;  
+  width: 300px;
+  transform: translateX(100%);
+  transition: transform 400ms ease-in-out;
 }
 
 .displayCart {
-  opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .productName {
