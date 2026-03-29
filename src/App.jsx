@@ -10,7 +10,7 @@ import Account from './pages/Account'
 import ProductInformation from './pages/Products/ProductInformation'
 
 function App() {
-  const [shoppingCart, setShoppingCart] = useState(null)
+  const [shoppingCart, setShoppingCart] = useState([])
 
   return (
     <Routes>

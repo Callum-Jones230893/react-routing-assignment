@@ -10,11 +10,11 @@ const SideBar = () => {
         <div className={styles.sideBarItem}>placeholder for army icons</div>
       </div>
       <div className={styles.sideBarSection}>
-        {categories.map((navigation, index) => 
+        {categories.map((navigation, index) => (
           <div className={`${styles.navItem} ${styles.sideBarItem}`} key={index}>
             <NavLink to={`/products/${navigation.value}`}>{navigation.name}</NavLink>
           </div>
-        )}
+        ))}
       </div>
       <div className={styles.sideBarSection}>
         <div className={styles.sideBarItem}>filter by prices placeholder</div>

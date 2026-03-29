@@ -33,10 +33,6 @@
   color: inherit;
 }
 
-.navItem a {
-  text-decoration: none;
-}
-
 .iconContainer {
   align-items: center;
   display: flex;
