@@ -1,7 +1,8 @@
+import { useEffect } from "react"
 import styles from "./previewCard.module.css"
 import randomProduct from "../../utils/randomProduct"
 
-const PreviewCard = () => {
+const PreviewCard = ({addItems}) => {
   const displayedProduct = randomProduct(4)
 
   return (
@@ -16,7 +17,7 @@ const PreviewCard = () => {
           <div className={styles.bottom}>
             <span>{product.name}</span>
             <span>{product.price}</span>
-            <span>add to cart</span>
+            <span onClick={() => addItems(product)}>Add to cart</span>
           </div>
         </div>
       ))}

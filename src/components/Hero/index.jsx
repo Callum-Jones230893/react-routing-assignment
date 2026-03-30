@@ -1,7 +1,8 @@
+import { useEffect } from "react"
 import styles from "./hero.module.css"
 import randomProduct from "../../utils/randomProduct"
 
-const Hero = () => {
+const Hero = ({addToCart}) => {
   const displayedProduct = randomProduct(1)
 
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
               <h2 className={styles.heroTitle}>{product.name}</h2>
               <p className={styles.heroInformation}>{product.information}</p>
               <p className={styles.heroPrice}>{product.price}</p>
-              <span className={styles.heroBtn}>Add to cart</span>
+              <span onClick={() => addToCart(product)}>Add to cart</span>
             </div>
           </div>
           <div className={styles.sideCard} key={index}>

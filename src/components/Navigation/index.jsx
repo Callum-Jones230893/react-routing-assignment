@@ -6,7 +6,7 @@ import styles from "./navigation.module.css"
 import DropDownMenu from "../DropDownMenu";
 import ShoppingCart from "../ShoppingCart";
 
-const Navigation = ({cart, updateCart}) => {
+const Navigation = ({shoppingCart, setShoppingCart}) => {
   const [displayCart, setDisplayCart] = useState(false)
   const [displayMenu, setDisplayMenu] = useState(false)
 
@@ -36,7 +36,7 @@ const Navigation = ({cart, updateCart}) => {
         <div>
           {!displayCart ? <ShoppingBagIcon size={28}  className={styles.cartIcon} onClick={showCart} />
                         : <ShoppingBagOpenIcon size={28} className={styles.cartIcon} onClick={showCart} />}
-          <ShoppingCart displayed={displayCart} shoppingCart={cart} updateShoppingCart={updateCart} />
+          <ShoppingCart displayed={displayCart} cart={shoppingCart} updateShoppingCart={setShoppingCart} />
         </div>
       </nav>
       <DropDownMenu 

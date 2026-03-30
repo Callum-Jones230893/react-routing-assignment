@@ -1,12 +1,15 @@
 import { Outlet } from "react-router-dom"
-import Layout from "../Layout"
 import ProductDisplay from "../../components/ProductDisplay"
 
-const Products = () => {
+const Products = ({cartItems, updateCartItems, addItem}) => {
 
   return (
     <>
-      <ProductDisplay />
+      <ProductDisplay 
+        cart={cartItems} 
+        setCart={updateCartItems} 
+        addToCart={addItem}
+      />
       <Outlet />
     </>
   )

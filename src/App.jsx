@@ -12,13 +12,19 @@ import ProductInformation from './pages/Products/ProductInformation'
 function App() {
   const [shoppingCart, setShoppingCart] = useState([])
 
+  const addToCart = (product) => {
+    setShoppingCart([...shoppingCart, product])
+  }
+  
+  console.log(shoppingCart)
+
   return (
     <Routes>
-      <Route element={<Layout cart={shoppingCart} updateCart={setShoppingCart} />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />}>
-          <Route path=":category" element={null} />
-          <Route path=":category/:id" element={<ProductInformation />} />
+      <Route element={<Layout cartItems={shoppingCart} updateCartItems={setShoppingCart} />}>
+        <Route path="/" element={<Home addItem={addToCart} />} />
+        <Route path="/products" element={<Products cartItems={shoppingCart} updateCartItems={setShoppingCart} addItem={addToCart} />}>
+          <Route path=":category" element={<Products cartItems={shoppingCart} updateCartItems={setShoppingCart} addItem={addToCart} />} />
+          <Route path=":category/:id" element={<ProductInformation cartItems={shoppingCart} updateCartItems={setShoppingCart} addItem={addToCart} />} />
         </Route>
         <Route path="/about" element={<About />} />
         <Route path="/checkout" element={<Checkout />} />

@@ -3,22 +3,21 @@ import styles from "./productDisplay.module.css"
 import ProductCard from "../ProductCard"
 import useProducts from "../../hooks/fetch"
 
-const ProductDisplay = () => {
-  const { category } = useParams()
+const ProductDisplay = ({category, cart, setCart, addToCart}) => {
   const { miniatures, paints, paintingAccessories} = useProducts()
 
   const allProducts = [...miniatures, ...paints, ...paintingAccessories]
   
   const filteredProducts = category
-    ? allProducts.filter(p => p.category === category)
+    ? allProducts.filter(product => product.category === category)
     : allProducts
 
   return (
     <div className={styles.displayWrapper}>
         <h3>{allProducts[0]?.category}</h3>
       <div className={styles.displayInnerWrapper}>
-        {filteredProducts.map(product => (
-          <ProductCard key={product.id} product={product} />
+        {filteredProducts.map((product, index) => (
+          <ProductCard key={index} product={product} addItems={addToCart} />
         ))}
       </div>
     </div>
