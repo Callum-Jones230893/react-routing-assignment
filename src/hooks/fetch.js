@@ -15,22 +15,21 @@ const useProducts = () => {
       supabase.from('Paints').select(``),
       supabase.from('Painting_accessories').select(``), 
     ])
-    
     if (minis.error) setError(minis.error)
-    else setMiniatures(minis.data)
-
+      else setMiniatures(minis.data)
+    
     if (paint.error) setError(paint.error)
-    else setPaints(paint.data)
-
+      else setPaints(paint.data)
+    
     if (accessories.error) setError(accessories.error)
-    else setPaintingAccessories(accessories.data)
+      else setPaintingAccessories(accessories.data)
   }
-
+  
   useEffect(() => {
     fetchData()
   }, [])
-
-  return { miniatures, paints, paintingAccessories, error }
+  
+return {miniatures, paints, paintingAccessories, error}
 }
 
 export default useProducts

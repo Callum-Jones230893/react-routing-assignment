@@ -4,7 +4,6 @@ import Logo from "../Logo"
 import Navigation from "../Navigation"
 
 const Header = ({cart, updateCart}) => {
-
   return (
     <div className={styles.headerWrapper}>
       <Logo />

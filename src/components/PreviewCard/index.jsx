@@ -1,13 +1,9 @@
-import { useEffect } from "react"
 import styles from "./previewCard.module.css"
-import randomProduct from "../../utils/randomProduct"
 
-const PreviewCard = ({addItems}) => {
-  const displayedProduct = randomProduct(4)
-
+const PreviewCard = ({addItems, randomPreviewProducts}) => {
   return (
     <div className={styles.previewContentWrapper}>
-      {displayedProduct.map((product, index) => (
+      {randomPreviewProducts.map((product, index) => (
         <div className={styles.previewProductCards} key={index}>
           <div className={styles.top}>
             <div className={styles.imageWrapper}>

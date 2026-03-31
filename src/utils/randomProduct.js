@@ -1,14 +1,8 @@
-import useProducts from "../hooks/fetch"
-
-const randomProduct = (number) => {
-  const { miniatures, paints, paintingAccessories } = useProducts()
-  const allProducts = [...miniatures, ...paints, ...paintingAccessories]
-
+const randomProduct = (allProducts, number) => {
   const randomizedProduct = [...allProducts].sort(() => 0.5 - Math.random())
 
   return number ? randomizedProduct.slice(0, number) 
-                : heroProduct
-
+                : randomizedProduct
 }
 
 export default randomProduct

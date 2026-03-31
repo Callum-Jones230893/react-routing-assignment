@@ -1,26 +1,19 @@
 import { useState, useEffect } from "react"
+import { NavLink } from "react-router-dom"
 import styles from "./shoppingCart.module.css"
 import CartItem from "../CartItem"
 
 const ShoppingCart = ({displayed, cart, updateShoppingCart}) => {
   const [cartTotal, setCartTotal] = useState(0.00)
 
-
-  const removeProduct = (product) => {
-    const exists = cart.find((item) => item.id === product.id)
-
-    if (exists) {
-      updateShoppingCart(cart.filter((item) => item.id !== product.id))
-    } else {
-      updateShoppingCart(
-        cart.map((item) => 
-          item.id === product.id
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-        )
-      )
-    }
+  const removeFromCart = (product) => {
+    const exists = cart.findLast((item) => item.id === product.id)
+      exists.quantity > 1 ? updateShoppingCart([...cart, {...product, quantity: product.quantity -1 }])
+                          : updateShoppingCart(cart.filter((item) => item.id !== product.id))
+    
   } 
+
+  // console.log(cart)
 
   const calculateTotal = () => {
     let sum = 0
@@ -34,9 +27,10 @@ const ShoppingCart = ({displayed, cart, updateShoppingCart}) => {
 
   return (
     <div className={styles.shoppingCartWrapper}>
-      <div className={`${styles.shoppingCartContent} ${displayed ? styles.displayCart : ``} `}>
-        <CartItem adjustQuantity={removeProduct} shoppingCart={cart} />
+      <div className={`${styles.shoppingCartContent} ${displayed ? styles.displayCart : ``}`}>
+        <CartItem adjustQuantity={removeFromCart} shoppingCart={cart} setShoppingCart={updateShoppingCart}/>
       <span>{cartTotal}</span>
+      <NavLink className={styles.navItem} to={"/checkout"}>Checkout</NavLink>
       </div>
     </div>
   )

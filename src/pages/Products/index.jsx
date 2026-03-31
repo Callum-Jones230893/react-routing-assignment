@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 import ProductDisplay from "../../components/ProductDisplay"
 
-const Products = ({cartItems, updateCartItems, addItem}) => {
+const Products = ({cartItems, updateCartItems, addItem, allProducts}) => {
 
   return (
     <>
@@ -9,6 +9,7 @@ const Products = ({cartItems, updateCartItems, addItem}) => {
         cart={cartItems} 
         setCart={updateCartItems} 
         addToCart={addItem}
+        productArray={allProducts}
       />
       <Outlet />
     </>

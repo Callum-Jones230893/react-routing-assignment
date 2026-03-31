@@ -1,13 +1,9 @@
-import { useEffect } from "react"
 import styles from "./hero.module.css"
-import randomProduct from "../../utils/randomProduct"
 
-const Hero = ({addToCart}) => {
-  const displayedProduct = randomProduct(1)
-
+const Hero = ({addToCart, heroProduct}) => {
   return (
     <>
-      {displayedProduct.map((product, index) => (
+      {heroProduct.map((product, index) => (
         <div className={styles.heroWrapper} key={index}>
           <div className={styles.mainCardWrapper} >
             <div className={styles.mainCardInnerWrapper}>
