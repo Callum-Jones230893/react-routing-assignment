@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   height: 75%;
-  margin: auto;
+  margin: 25px auto;
   width: 50%;
 }
 
@@ -18,8 +18,8 @@
 }
 
 .imageWrapper {
-  height: 30%;
-  width: 30%;
+  height: 100%;
+  width: 100%;
 }
 
 .imageWrapper img {
