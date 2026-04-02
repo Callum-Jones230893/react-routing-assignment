@@ -1,10 +1,11 @@
-.productCard {
+.fullProductWrapper {
   background: var(--background-four);
   border: 1px solid var(--border-one);
   display: flex;
   flex-direction: column;
-  height: auto;
-  width: calc(25% - 10px);
+  height: 75%;
+  margin: auto;
+  width: 50%;
 }
 
 .top {
@@ -17,8 +18,8 @@
 }
 
 .imageWrapper {
-  height: 70%;
-  width: 70%;
+  height: 30%;
+  width: 30%;
 }
 
 .imageWrapper img {

@@ -29,3 +29,7 @@
 .productName {
   font-size: 2rem;
 }
+
+.totalPrice {
+  color: black;
+}

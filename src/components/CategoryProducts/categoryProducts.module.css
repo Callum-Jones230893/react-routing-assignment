@@ -1,0 +1,12 @@
+.displayWrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.displayInnerWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin-bottom: 32px;
+  width: 100%;
+}

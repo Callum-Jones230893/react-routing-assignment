@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import styles from "./previewCard.module.css"
 
 const PreviewCard = ({addItems, randomPreviewProducts}) => {
@@ -14,11 +15,11 @@ const PreviewCard = ({addItems, randomPreviewProducts}) => {
             <span>{product.name}</span>
             <span>{product.price}</span>
             <span onClick={() => addItems(product)}>Add to cart</span>
+            <NavLink to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
           </div>
         </div>
       ))}
     </div>
-
   )
 }
 

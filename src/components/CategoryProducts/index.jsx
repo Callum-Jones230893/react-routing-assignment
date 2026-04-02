@@ -1,7 +1,7 @@
-import styles from "./productDisplay.module.css"
+import styles from "./categoryProducts.module.css"
 import ProductCard from "../ProductCard"
 
-const ProductDisplay = ({addToCart, productArray}) => {
+const CategoryProducts = ({addToCart, productArray}) => {
 
   return (
     <div className={styles.displayWrapper}>
@@ -15,4 +15,4 @@ const ProductDisplay = ({addToCart, productArray}) => {
   )
 }
 
-export default ProductDisplay
+export default CategoryProducts

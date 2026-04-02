@@ -6,8 +6,8 @@ import randomProduct from "../utils/randomProduct"
   const [heroProduct, setHeroProduct] = useState([])
   const [previewProducts, setPreviewProducts] = useState([])
   
-  const { miniatures, paints, paintingAccessories } = useProducts()
-  const allProductsArray = [...miniatures, ...paints, ...paintingAccessories]
+  const { miniatures, paints, accessories } = useProducts()
+  const allProductsArray = [...miniatures, ...paints, ...accessories]
   
   const randomHeroProduct = () => {
     const randomizedProduct = randomProduct(allProductsArray, 1)
@@ -22,7 +22,7 @@ import randomProduct from "../utils/randomProduct"
   useEffect(() => {
     randomHeroProduct()
     randomPreviewProducts()
-  }, [miniatures, paints, paintingAccessories])
+  }, [miniatures, paints, accessories])
 
   return {heroProduct, previewProducts}
 }

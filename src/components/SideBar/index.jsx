@@ -10,6 +10,7 @@ const SideBar = () => {
         <div className={styles.sideBarItem}>placeholder for army icons</div>
       </div>
       <div className={styles.sideBarSection}>
+        <NavLink to={"/products"}>All Products</NavLink>
         {categories.map((navigation, index) => (
           <div className={`${styles.navItem} ${styles.sideBarItem}`} key={index}>
             <NavLink to={`/products/${navigation.value}`}>{navigation.name}</NavLink>

@@ -7,13 +7,13 @@ const ShoppingCart = ({displayed, cart, updateShoppingCart}) => {
   const [cartTotal, setCartTotal] = useState(0.00)
 
   const removeFromCart = (product) => {
-    const exists = cart.findLast((item) => item.id === product.id)
-      exists.quantity > 1 ? updateShoppingCart([...cart, {...product, quantity: product.quantity -1 }])
-                          : updateShoppingCart(cart.filter((item) => item.id !== product.id))
-    
+    const exists = cart.find((item) => item.name === product.name)
+    updateShoppingCart( 
+      exists.quantity > 1 ? cart.map(item => item.name === product.name ?  {...item, quantity: item.quantity - 1} : item)
+                          : cart.filter(item => item.name !== product.name
+      )
+    )
   } 
-
-  // console.log(cart)
 
   const calculateTotal = () => {
     let sum = 0
@@ -29,7 +29,7 @@ const ShoppingCart = ({displayed, cart, updateShoppingCart}) => {
     <div className={styles.shoppingCartWrapper}>
       <div className={`${styles.shoppingCartContent} ${displayed ? styles.displayCart : ``}`}>
         <CartItem adjustQuantity={removeFromCart} shoppingCart={cart} setShoppingCart={updateShoppingCart}/>
-      <span>{cartTotal}</span>
+      <span className={styles.totalPrice}>{cartTotal}</span>
       <NavLink className={styles.navItem} to={"/checkout"}>Checkout</NavLink>
       </div>
     </div>

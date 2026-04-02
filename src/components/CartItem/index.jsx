@@ -7,6 +7,7 @@ const CartItem = ({adjustQuantity, shoppingCart}) => {
       {shoppingCart.map((product, index) =>
         <div className={styles.cartItemWrapper} key={index}>
           <div>{product.name}</div>
+          <div>{product.price * product.quantity}</div>
           <div>{product.quantity}</div>
           <span onClick={() => {adjustQuantity(product)}}>Remove</span>
         </div>

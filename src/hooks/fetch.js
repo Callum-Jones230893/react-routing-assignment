@@ -5,7 +5,7 @@ const useProducts = () => {
   
   const [miniatures, setMiniatures] = useState([])
   const [paints, setPaints] = useState([])
-  const [paintingAccessories, setPaintingAccessories] = useState([])
+  const [accessories, setAccessories] = useState([])
   const [error, setError] = useState(null)
 
   const fetchData = async () => {
@@ -13,7 +13,7 @@ const useProducts = () => {
     const [minis, paint, accessories] = await Promise.all([
       supabase.from('Miniatures').select(``),
       supabase.from('Paints').select(``),
-      supabase.from('Painting_accessories').select(``), 
+      supabase.from('Accessories').select(``), 
     ])
     if (minis.error) setError(minis.error)
       else setMiniatures(minis.data)
@@ -22,14 +22,14 @@ const useProducts = () => {
       else setPaints(paint.data)
     
     if (accessories.error) setError(accessories.error)
-      else setPaintingAccessories(accessories.data)
+      else setAccessories(accessories.data)
   }
   
   useEffect(() => {
     fetchData()
   }, [])
   
-return {miniatures, paints, paintingAccessories, error}
+return {miniatures, paints, accessories, error}
 }
 
 export default useProducts

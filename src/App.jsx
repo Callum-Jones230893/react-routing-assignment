@@ -15,13 +15,16 @@ function App() {
   const [shoppingCart, setShoppingCart] = useState([])
   const {heroProduct, previewProducts} = useRandomProduct() 
   // put the useRandomProduct() inside mainContent
-  const { miniatures, paints, paintingAccessories} = useProducts()
-  const allProductsArray = [...miniatures, ...paints, ...paintingAccessories]
+  const { miniatures, paints, accessories} = useProducts()
+  const allProductsArray = [...miniatures, ...paints, ...accessories]
   
   const addToCart = (product) => {
-    const exists = shoppingCart.findLast((item) => item.id === product.id)
-    !exists ? setShoppingCart([...shoppingCart, {...product, quantity: 1}]) 
-             : setShoppingCart([...shoppingCart, {...exists, quantity: exists.quantity + 1}]) 
+    const exists = shoppingCart.find((item) => item.name === product.name)
+    setShoppingCart(
+      !exists ? [...shoppingCart, {...product, quantity: 1}]
+              : shoppingCart.map(item => item.name === product.name ? {...item, quantity: item.quantity + 1} : item
+      ) 
+    )
   }
 
   return (
@@ -30,7 +33,7 @@ function App() {
         <Route path="/" element={<Home addItem={addToCart} heroItem={heroProduct} previewItems={previewProducts} />} />
         <Route path="/products" element={<Products cartItems={shoppingCart} updateCartItems={setShoppingCart} addItem={addToCart} allProducts={allProductsArray} />}>
           <Route path=":category" element={<Products cartItems={shoppingCart} updateCartItems={setShoppingCart} addItem={addToCart} allProducts={allProductsArray} />} />
-          <Route path=":category/:id" element={<ProductInformation cartItems={shoppingCart} updateCartItems={setShoppingCart} addItem={addToCart}  allProducts={allProductsArray} />} />
+          <Route path=":category/:name" element={<ProductInformation cartItems={shoppingCart} updateCartItems={setShoppingCart} addItem={addToCart} allProducts={allProductsArray} />} />
         </Route>
         <Route path="/about" element={<About />} />
         <Route path="/checkout" element={<Checkout />} />
