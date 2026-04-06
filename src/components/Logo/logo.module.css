@@ -1,0 +1,16 @@
+.logoWrapper {
+  height: auto;
+  width: 220px;
+}
+
+@media (max-width: 768px) {
+  .logoWrapper {
+    height: auto;
+    width: 180px;
+  }
+}
+
+.logoImage {
+  height: auto;
+  width: 100%;
+}

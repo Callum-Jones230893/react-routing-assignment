@@ -8,7 +8,7 @@ const Layout = ({cartItems, updateCartItems, productArray}) => {
 
   return (
     <div className={styles.layoutWrapper}>
-      <Header cart={cartItems} updateCart={updateCartItems} />
+      <Header cart={cartItems} updateCart={updateCartItems} products={productArray} />
       <div className={styles.mainContent}>
         <SideBar products={productArray} />
         <div className={styles.pageContent}>

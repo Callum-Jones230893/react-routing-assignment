@@ -3,7 +3,7 @@
   border: 1px solid var(--border-one);
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 500px;
   margin: 25px auto;
   width: calc(20% - 10px);
 }

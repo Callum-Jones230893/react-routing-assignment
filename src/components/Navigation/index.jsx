@@ -6,7 +6,7 @@ import styles from "./navigation.module.css"
 import DropDownMenu from "../DropDownMenu";
 import ShoppingCart from "../ShoppingCart";
 
-const Navigation = ({shoppingCart, setShoppingCart}) => {
+const Navigation = ({shoppingCart, setShoppingCart, productArray}) => {
   const [displayCart, setDisplayCart] = useState(false)
   const [displayMenu, setDisplayMenu] = useState(false)
 
@@ -40,10 +40,10 @@ const Navigation = ({shoppingCart, setShoppingCart}) => {
         </div>
       </nav>
       <DropDownMenu 
-        pageLink={pages} 
         toggleCart={showCart}
         menuDisplay={displayMenu}
         toggleMenu={showMenu}
+        products={productArray}
       />
     </>
   )

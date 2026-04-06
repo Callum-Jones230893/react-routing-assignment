@@ -1,0 +1,62 @@
+<svg width="680" height="320" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    .logo-text-main { font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', serif; font-style: italic; fill: #f5e6c0; }
+    .logo-text-sub  { font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', serif; letter-spacing: 6px; fill: #c8a840; }
+    .logo-text-tag  { font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', serif; letter-spacing: 3px; fill: #9a8060; font-style: italic; }
+  </style>
+</defs>
+
+<rect width="680" height="320" fill="#2a2018" rx="8"/>
+
+<rect x="30" y="30" width="620" height="260" fill="none" stroke="#c8a840" stroke-width="1.5"/>
+<rect x="36" y="36" width="608" height="248" fill="none" stroke="#5a4a30" stroke-width="0.5"/>
+
+<line x1="30"  y1="58"  x2="654" y2="58"  stroke="#3a3028" stroke-width="0.5"/>
+<line x1="30"  y1="262" x2="654" y2="262" stroke="#3a3028" stroke-width="0.5"/>
+
+<polygon points="340,44 348,58 332,58"       fill="#c8a840"/>
+<polygon points="340,276 348,262 332,262"    fill="#c8a840"/>
+<polygon points="44,160 58,152 58,168"       fill="#c8a840"/>
+<polygon points="636,160 622,152 622,168"    fill="#c8a840"/>
+
+<polygon points="30,30 50,30 30,50"          fill="#c8a840"/>
+<polygon points="650,30 650,50 630,30"       fill="#c8a840"/>
+<polygon points="30,290 30,270 50,290"       fill="#c8a840"/>
+<polygon points="650,290 630,290 650,270"    fill="#c8a840"/>
+
+<g transform="translate(340,148)">
+  <polygon points="0,-38 8,-12 36,-12 14,4 22,30 0,14 -22,30 -14,4 -36,-12 -8,-12" fill="#c8a840"/>
+  <polygon points="0,-22 4,-10 16,-10 7,0 11,14 0,7 -11,14 -7,0 -16,-10 -4,-10"    fill="#2a2018"/>
+  <circle cx="0" cy="0" r="5" fill="#c8a840"/>
+
+  <circle cx="0"   cy="-48" r="3" fill="none" stroke="#c8a840" stroke-width="1"/>
+  <circle cx="0"   cy="48"  r="3" fill="none" stroke="#c8a840" stroke-width="1"/>
+  <circle cx="-48" cy="0"   r="3" fill="none" stroke="#c8a840" stroke-width="1"/>
+  <circle cx="48"  cy="0"   r="3" fill="none" stroke="#c8a840" stroke-width="1"/>
+
+  <line x1="-6" y1="-48" x2="6"  y2="-48" stroke="#c8a840" stroke-width="0.8"/>
+  <line x1="-6" y1="48"  x2="6"  y2="48"  stroke="#c8a840" stroke-width="0.8"/>
+  <line x1="-48" y1="-6" x2="-48" y2="6"  stroke="#c8a840" stroke-width="0.8"/>
+  <line x1="48"  y1="-6" x2="48"  y2="6"  stroke="#c8a840" stroke-width="0.8"/>
+
+  <path d="M -38,-26 A 46 46 0 0 1 -26,-38" fill="none" stroke="#5a4a30" stroke-width="0.8"/>
+  <path d="M  26,-38 A 46 46 0 0 1  38,-26" fill="none" stroke="#5a4a30" stroke-width="0.8"/>
+  <path d="M  38, 26 A 46 46 0 0 1  26, 38" fill="none" stroke="#5a4a30" stroke-width="0.8"/>
+  <path d="M -26, 38 A 46 46 0 0 1 -38, 26" fill="none" stroke="#5a4a30" stroke-width="0.8"/>
+</g>
+
+<text x="340" y="90"  text-anchor="middle" class="logo-text-main" font-size="42" font-weight="700">The Warpstone</text>
+<text x="340" y="238" text-anchor="middle" class="logo-text-sub"  font-size="13">E M P O R I U M</text>
+
+<line x1="100" y1="253" x2="240" y2="253" stroke="#5a4a30" stroke-width="0.8"/>
+<line x1="440" y1="253" x2="580" y2="253" stroke="#5a4a30" stroke-width="0.8"/>
+<text x="340" y="257" text-anchor="middle" fill="#5a4a30" font-size="10" font-family="serif">&#x2726;</text>
+
+<text x="340" y="274" text-anchor="middle" class="logo-text-tag" font-size="11">Miniatures · Pigments · Tomes</text>
+
+<line x1="110" y1="104" x2="200" y2="104" stroke="#3a3028" stroke-width="0.5"/>
+<line x1="480" y1="104" x2="570" y2="104" stroke="#3a3028" stroke-width="0.5"/>
+<text x="155" y="108" text-anchor="middle" fill="#3a3028" font-size="9" font-family="serif">&#x2726;</text>
+<text x="525" y="108" text-anchor="middle" fill="#3a3028" font-size="9" font-family="serif">&#x2726;</text>
+</svg>

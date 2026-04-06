@@ -9,6 +9,7 @@
   .previewContentWrapper {
     display: flex;
     flex-direction: column;
+    /* overflow-x: auto; */
   }
 }
 
@@ -61,6 +62,12 @@
   letter-spacing: 1px;
   line-height: 1.8;
   padding: 15px 0 0 25px;
+}
+
+@media (max-width: 768px) {
+  .bottomDiv {
+    line-height: normal;
+  }
 }
 
 .productNav {
