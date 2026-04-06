@@ -12,10 +12,12 @@ const PreviewCard = ({addItems, randomPreviewProducts}) => {
             </div>
           </div>
           <div className={styles.bottom}>
-            <span>{product.name}</span>
-            <span>{product.price}</span>
-            <span onClick={() => addItems(product)}>Add to cart</span>
-            <NavLink to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
+            <div className={styles.bottomDiv}>
+              <p>{product.name}</p>
+              <p>{product.price} SEK</p>
+              <span onClick={() => addItems(product)}>Add to cart</span>
+            </div>
+            <NavLink className={styles.productNav} to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
           </div>
         </div>
       ))}

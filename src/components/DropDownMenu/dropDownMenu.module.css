@@ -5,6 +5,7 @@
 
 @media (max-width: 768px) {
   .dropDownWrapper {
+    color: var(--font-six);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,10 +13,11 @@
     position: relative;
     z-index: 11;
   }
-
+  
   .dropDownContent {
     background-color: var(--background-three);
     border-left: 1px solid var(--background-one);
+    color: var(--font-three);
     display: flex;
     flex-direction: column;
     height: calc(100vh - 65px);

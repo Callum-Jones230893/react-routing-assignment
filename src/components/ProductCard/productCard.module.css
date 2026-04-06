@@ -8,6 +8,12 @@
   width: calc(20% - 10px);
 }
 
+@media (max-width: 768px) {
+  .productCard {
+    width: 80%;
+  }
+}
+
 .top {
   align-items: center;
   background-color: var(--background-images);
@@ -31,11 +37,21 @@
 .bottom {
   background-color: var(--background-four);
   border-top: 1px solid var(--border-one);
-  color: var(--font-five);
   display: flex;
   flex-direction: column;
+  font-size: 16px;
   height: 50%;
   width: 100%;
+}
+
+.bottomDiv {
+  color: var(--font-three);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  padding: 15px 0 0 25px;
 }
 
 .productTitle {

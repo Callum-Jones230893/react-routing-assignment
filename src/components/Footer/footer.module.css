@@ -1,5 +1,6 @@
 .footerWrapper {
   align-items: center;
+  background: var(--background-one);
   border-top: 1px solid var(--border-two);
   display: flex;
   height: 60px;

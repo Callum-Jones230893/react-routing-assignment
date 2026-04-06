@@ -1,4 +1,3 @@
-import { useState } from "react"
 import styles from "./header.module.css"
 import Logo from "../Logo"
 import Navigation from "../Navigation"

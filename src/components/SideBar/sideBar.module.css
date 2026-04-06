@@ -7,6 +7,12 @@
   width: 210px;
 }
 
+@media (max-width: 768px) {
+  .sideBarWrapper {
+    display: none;
+  }
+}
+
 .sideBarContent {
   display: flex;
   flex-direction: column;
@@ -37,6 +43,18 @@
 .navItem {
   color: inherit;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productCount {
+  cursor: default;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.productCount:hover {
+  font-weight: normal;
 }
 
 .iconContainer {

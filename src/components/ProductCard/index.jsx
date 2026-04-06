@@ -11,10 +11,12 @@ const ProductCard = ({product, addItems}) => {
         </div>
       </div>
       <div className={styles.bottom}>
-        <p>{product.name}</p>
-        <p>{product.price}</p>
-        <span onClick={() => addItems(product)}>Add to cart</span>
-        <NavLink to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
+        <div className={styles.bottomDiv}>
+          <p>{product.name}</p>
+          <p>{product.price} SEK</p>
+          <span onClick={() => addItems(product)}>Add to cart</span>
+          <NavLink className={styles.productNav} to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
+        </div>
       </div>
     </div>
   )

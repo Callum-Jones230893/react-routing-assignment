@@ -1,4 +1,14 @@
 .cartItemWrapper {
   color: black;
   display: flex;
+  flex-direction: column;
+}
+
+.itemQtyContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.qtyToggle {
+  text-decoration: none;
 }

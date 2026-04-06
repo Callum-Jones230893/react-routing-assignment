@@ -1,9 +1,11 @@
+import { NavLink } from "react-router-dom"
 import styles from "./sideBar.module.css"
 import { UserCircleIcon, ShoppingBagIcon } from "@phosphor-icons/react"
-import { categories } from "../../data/data"
-import { NavLink } from "react-router-dom"
 
-const SideBar = () => {
+const SideBar = ({products}) => {
+  const categoryGroups = Object.groupBy(products, ({category}) => category)
+  const groupsArray = Array.from(Object.entries(categoryGroups))
+
   return (
     <div className={styles.sideBarWrapper}>
       <div className={styles.sideBarContent}>
@@ -12,9 +14,10 @@ const SideBar = () => {
         </div>
         <div className={styles.sideBarSection}>
           <NavLink to={"/products"}>All Products</NavLink>
-          {categories.map((navigation, index) => (
+          {groupsArray.map(([key, value], index) => (
             <div className={`${styles.navItem} ${styles.sideBarItem}`} key={index}>
-              <NavLink to={`/products/${navigation.value}`}>{navigation.name}</NavLink>
+              <NavLink to={`/products/${key}`}>{value[0].category}</NavLink>
+              <span className={styles.productCount}>{value.length}</span>
             </div>
           ))}
         </div>

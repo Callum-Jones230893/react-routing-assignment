@@ -9,10 +9,22 @@
   padding: 0 28px;
 }
 
+@media (max-width: 768px) {
+  .headerWrapper {
+    padding: 13px 28px;
+  }
+}
+
 .titleWrapper {
   display: flex;
 }
 
 .title {
   font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    display: none;
+  }
 }

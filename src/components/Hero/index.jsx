@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import styles from "./hero.module.css"
 
 const Hero = ({addToCart, heroProduct}) => {
@@ -9,13 +10,16 @@ const Hero = ({addToCart, heroProduct}) => {
             <div className={styles.mainCardInnerWrapper}>
               <h3 className={styles.newItemsTitle}>New Product!</h3>
               <h2 className={styles.heroTitle}>{product.name}</h2>
-              <p className={styles.heroInformation}>{product.information}</p>
-              <p className={styles.heroPrice}>{product.price}</p>
-              <span onClick={() => addToCart(product)}>Add to cart</span>
+              <p className={styles.heroInformation}>{product.description}</p>
+              <span onClick={() => addToCart(product)}>Add to cart - {product.price} SEK</span>
             </div>
           </div>
           <div className={styles.sideCard} key={index}>
-            {/* {product.image && <img src={product.imageTwo} alt={product.name} />} */}
+            <div className={styles.sideCardInnerWrapper}>
+              <h3 className={styles.newItemsContents}>Contents</h3>
+              <p className={styles.heroContents}>{product.contents}</p>
+            </div>
+            <NavLink className={styles.productNav} to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
           </div>
       </div>
       ))}

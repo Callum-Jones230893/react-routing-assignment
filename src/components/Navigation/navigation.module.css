@@ -9,9 +9,21 @@
   border-left: 1px solid var(--border-one);
   color: var(--font-six);
   display: flex;
+  font-style: normal;
   height: 100%;
   padding: 13px 18px;
   text-decoration: none;
+}
+
+.navItem:hover {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navItem {
+    display: none;
+  }
 }
 
 .cartIcon {

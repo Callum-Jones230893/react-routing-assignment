@@ -5,6 +5,13 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+@media (max-width: 768px) {
+  .previewContentWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .previewProductCards {
   align-items: center;
   background: var(--background-one);
@@ -39,9 +46,24 @@
 .bottom {
   background-color: var(--background-four);
   border-top: 1px solid var(--border-one);
-  color: var(--font-five);
   display: flex;
   flex-direction: column;
+  font-size: 16px;
   height: 50%;
   width: 100%;
+}
+
+.bottomDiv {
+  color: var(--font-three);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  padding: 15px 0 0 25px;
+}
+
+.productNav {
+  align-self: center;
+  padding-bottom: 15px;
 }

@@ -29,7 +29,7 @@ function App() {
 
   return (
     <Routes>
-      <Route element={<Layout cartItems={shoppingCart} updateCartItems={setShoppingCart} />}>
+      <Route element={<Layout cartItems={shoppingCart} updateCartItems={setShoppingCart} productArray={allProductsArray} />}>
         <Route path="/" element={<Home addItem={addToCart} heroItem={heroProduct} previewItems={previewProducts} />} />
         <Route path="/products" element={<Products cartItems={shoppingCart} updateCartItems={setShoppingCart} addItem={addToCart} allProducts={allProductsArray} />}>
           <Route path=":category" element={<Products cartItems={shoppingCart} updateCartItems={setShoppingCart} addItem={addToCart} allProducts={allProductsArray} />} />

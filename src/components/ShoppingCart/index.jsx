@@ -29,8 +29,10 @@ const ShoppingCart = ({displayed, cart, updateShoppingCart}) => {
     <div className={styles.shoppingCartWrapper}>
       <div className={`${styles.shoppingCartContent} ${displayed ? styles.displayCart : ``}`}>
         <CartItem adjustQuantity={removeFromCart} shoppingCart={cart} setShoppingCart={updateShoppingCart}/>
-      <span className={styles.totalPrice}>{cartTotal}</span>
-      <NavLink className={styles.navItem} to={"/checkout"}>Checkout</NavLink>
+        <div className={styles.checkoutWrapper}>
+          <span className={styles.totalPrice}>{cartTotal}</span>
+          <NavLink className={styles.navItem} to={"/checkout"}>Checkout</NavLink>
+        </div>
       </div>
     </div>
   )

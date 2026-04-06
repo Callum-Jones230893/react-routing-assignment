@@ -5,7 +5,7 @@ const PreviewContent = ({addToCart, previewProducts}) => {
   return (
     <div className={styles.previewWrapper}>
       <div className={styles.previewHeader}>
-        <h4>Preview</h4>
+        <h4>Recommended Products</h4>
       </div>
       <PreviewCard addItems={addToCart} randomPreviewProducts={previewProducts} />
     </div>

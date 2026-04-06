@@ -30,3 +30,21 @@ body {
   margin: 0 auto;
   min-height: 100vh;
 }
+
+.productNav {
+  text-decoration: none;
+}
+
+span,
+a {
+  color: inherit;
+  cursor: pointer;
+  /* font-style: italic; */
+  letter-spacing: 1px;
+  text-decoration: underline 1px var(--font-two);
+}
+
+span:hover,
+a:hover {
+  font-weight: bold;
+}
