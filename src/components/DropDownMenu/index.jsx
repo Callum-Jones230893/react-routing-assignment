@@ -2,30 +2,22 @@ import { ArrowFatLinesDownIcon, ArrowFatLinesUpIcon } from "@phosphor-icons/reac
 import { NavLink } from "react-router-dom"
 import { pages } from "../../data/data"
 import styles from "./dropDownMenu.module.css"
+import DropDownSubMenu from "../DropDownSubMenu"
 
 const DropDownMenu = ({menuDisplay, toggleCart, toggleMenu, products}) => {
-  // const categoryGroups = Object.groupBy(products, ({category}) => category)
-  // const groupsArray = Array.from(Object.entries(categoryGroups))
-
   return (
     <div className={styles.dropDownWrapper}>
       {!menuDisplay ? <ArrowFatLinesDownIcon size={28} onClick={toggleMenu} />
                     : <ArrowFatLinesUpIcon size={28} onClick={toggleMenu} />}
       <div className={`${styles.dropDownContent} ${menuDisplay ? styles.displayDropDown : ``}`}>
         {pages.map((navigation, index) => (
-          <div key={index}>
-            <NavLink className={styles.navItem} to={`/${navigation.page}`}>{navigation.name}</NavLink>
+          <div key={index} className={styles.navItemWrapper}>
+            <NavLink className={styles.navItem} to={`/${navigation.page}`} onClick={toggleMenu}>
+              {navigation.name}
+            </NavLink>
           </div>
         ))}
-      {/* <div className={styles.sideBarSection}>
-        <NavLink to={"/products"}>All Products</NavLink>
-        {groupsArray.map(([key, value], index) => (
-          <div className={`${styles.navItem} ${styles.sideBarItem}`} key={index}>
-            <NavLink to={`/products/${key}`}>{value[0].category}</NavLink>
-            <span className={styles.productCount}>{value.length}</span>
-          </div>
-        ))}
-      </div> */}
+        <DropDownSubMenu products={products} toggleMenu={toggleMenu} />
       </div>
     </div>
   )
