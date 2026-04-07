@@ -2,7 +2,6 @@ import styles from "./productDisplay.module.css"
 import ProductCard from "../ProductCard"
 
 const ProductDisplay = ({productArray}) => {
-
   return (
     <div className={styles.displayWrapper}>
       <h3>{productArray[0]?.category}</h3>
