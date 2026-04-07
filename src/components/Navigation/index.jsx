@@ -2,28 +2,37 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom"
 import { pages } from "../../data/data"
 import { ShoppingBagIcon, ShoppingBagOpenIcon } from "@phosphor-icons/react";
+import useNav from "../../hooks/useNav";
 import styles from "./navigation.module.css"
 import DropDownMenu from "../DropDownMenu";
 import ShoppingCart from "../ShoppingCart";
 
 const Navigation = ({shoppingCart, setShoppingCart, productArray}) => {
-  const [displayCart, setDisplayCart] = useState(false)
-  const [displayMenu, setDisplayMenu] = useState(false)
+  const {displayCart, displayMenu, displaySubMenu, showCart, showMenu, showSubMenu} = useNav();
 
-  useEffect(() => {
-    document.body.style.overflow =  displayMenu ? "hidden" : "unset"
-    return () => { document.body.style.overflow = "unset"}
-  }, [displayMenu])
+  // const [displayCart, setDisplayCart] = useState(false)
+  // const [displayMenu, setDisplayMenu] = useState(false)
+  // const [displaySubMenu, setDisplaySubMenu] = useState(false)
 
-  const showCart = () => {
-    setDisplayCart(!displayCart)
-    setDisplayMenu(false)
-  }
+  // useEffect(() => {
+  //   document.body.style.overflow =  displayMenu ? "hidden" : "unset"
+  //   return () => { document.body.style.overflow = "unset"}
+  // }, [displayMenu])
 
-  const showMenu = () => {
-    setDisplayMenu(!displayMenu)
-    setDisplayCart(false)
-  }
+  // const showCart = () => {
+  //   setDisplayCart(!displayCart)
+  //   setDisplayMenu(false)
+  // }
+
+  // const showMenu = () => {
+  //   setDisplayMenu(!displayMenu)
+  //   setDisplayCart(false)
+  //   setDisplaySubMenu(false)
+  // }
+
+  // const showSubMenu = () => {
+  //   setDisplaySubMenu(!displaySubMenu)
+  // }
 
   return (
     <>
@@ -39,11 +48,13 @@ const Navigation = ({shoppingCart, setShoppingCart, productArray}) => {
           <ShoppingCart displayed={displayCart} cart={shoppingCart} updateShoppingCart={setShoppingCart} />
         </div>
       </nav>
-      <DropDownMenu 
+      <DropDownMenu
         toggleCart={showCart}
         menuDisplay={displayMenu}
         toggleMenu={showMenu}
         products={productArray}
+        toggleSubMenu={showSubMenu}
+        displaySub={displaySubMenu}
       />
     </>
   )

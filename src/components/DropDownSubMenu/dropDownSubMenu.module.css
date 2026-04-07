@@ -1,19 +1,29 @@
-  .subMenuWrapper {
-    display: flex;
-    font-size: 14px;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 25px;
-    padding: 5px;
-  }
+.subMenuToggle {
+  padding-left: 10px;
+  text-decoration: none;
+}
 
-  .navItemWrapper {
-    padding: 10px 0 0 10px;
-  }
+.subMenuWrapper {
+  max-height: 0px;
+  padding: 10px 0 0 10px;
+  transition: max-height 400ms ease-in-out;
+}
 
-  .navItem {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 15px;
-  }
+.navItemWrapper {
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.navItem {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+}
+
+.displaySubMenu {
+  max-height: 500px;
+}

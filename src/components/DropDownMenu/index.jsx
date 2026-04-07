@@ -4,7 +4,8 @@ import { pages } from "../../data/data"
 import styles from "./dropDownMenu.module.css"
 import DropDownSubMenu from "../DropDownSubMenu"
 
-const DropDownMenu = ({menuDisplay, toggleCart, toggleMenu, products}) => {
+const DropDownMenu = ({menuDisplay, toggleCart, toggleMenu, products, toggleSubMenu, displaySub}) => {
+
   return (
     <div className={styles.dropDownWrapper}>
       {!menuDisplay ? <ArrowFatLinesDownIcon size={28} onClick={toggleMenu} />
@@ -17,7 +18,12 @@ const DropDownMenu = ({menuDisplay, toggleCart, toggleMenu, products}) => {
             </NavLink>
           </div>
         ))}
-        <DropDownSubMenu products={products} toggleMenu={toggleMenu} />
+        <DropDownSubMenu 
+          products={products}
+          toggleMenu={toggleMenu}
+          toggleSub={toggleSubMenu}
+          displaySubMenu={displaySub}
+        />
       </div>
     </div>
   )

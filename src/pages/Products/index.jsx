@@ -19,9 +19,9 @@ const Products = ({cartItems, updateCartItems, addItem, allProducts}) => {
             productArray={filteredProducts}
           />
         : <ProductDisplay 
-          addToCart={addItem}
-          productArray={allProducts}
-        />
+            addToCart={addItem}
+            productArray={allProducts}
+          />
       }
     </>
   )
