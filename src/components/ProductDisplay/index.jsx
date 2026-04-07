@@ -1,14 +1,14 @@
 import styles from "./productDisplay.module.css"
 import ProductCard from "../ProductCard"
 
-const ProductDisplay = ({addToCart, productArray}) => {
+const ProductDisplay = ({productArray}) => {
 
   return (
     <div className={styles.displayWrapper}>
       <h3>{productArray[0]?.category}</h3>
       <div className={styles.displayInnerWrapper}>
         {productArray.map((product, index) => (
-          <ProductCard key={index} product={product} addItems={addToCart} allProducts={productArray} />
+          <ProductCard key={index} product={product} allProducts={productArray} />
         ))}
       </div>
     </div>

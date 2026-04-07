@@ -1,7 +1,10 @@
-import { useEffect } from "react"
+import { useContext } from "react"
+import { CartFunctionContext } from "../../context/CartFunctionContext"
 import styles from "./cartItem.module.css"
 
-const CartItem = ({adjustQuantity, shoppingCart}) => {
+const CartItem = () => {
+  const {shoppingCart, addToCart, removeFromCart} = useContext(CartFunctionContext)
+
   return (
     <div>
       {shoppingCart.map((product, index) =>
@@ -13,7 +16,7 @@ const CartItem = ({adjustQuantity, shoppingCart}) => {
             <div>{product.quantity}</div>
             <span className={styles.qtyToggle}>+</span>
           </div>
-          <span onClick={() => {adjustQuantity(product)}}>Remove</span>
+          <span onClick={() => {removeFromCart(product)}}>Remove</span>
         </div>
       )}
     </div>

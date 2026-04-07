@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 import styles from "./dropDownSubMenu.module.css"
 
 
-const DropDownSubMenu = ({ products, toggleMenu, toggleSub, displaySubMenu}) => {
+const DropDownSubMenu = ({products, toggleMenu, toggleSub, displaySubMenu}) => {
 
   const categoryGroups = Object.groupBy(products, ({category}) => category)
   const groupsArray = Array.from(Object.entries(categoryGroups))

@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom"
 import FullProductCard from "../../../components/fullProductCard"
 
-const ProductInformation = ({addToCart, allProducts, cart, setCart}) => {
-  const { name } = useParams()
+const ProductInformation = ({allProducts}) => {
+  const {name} = useParams()
+  
 
   const filteredProductByName = name
   ? allProducts.filter(product => product.name.toLowerCase().replace(/\s+/g, '') === name.toLowerCase().replace(/\s+/g, ''))
@@ -13,7 +14,7 @@ const ProductInformation = ({addToCart, allProducts, cart, setCart}) => {
   return (
     <>
       {filteredProductByName.map((product, index) => 
-        <FullProductCard key={index} addItems={addToCart} shoppingCart={cart} updateCart={setCart} product={product} />
+        <FullProductCard key={index} product={product} />
       )}
     </>
   )

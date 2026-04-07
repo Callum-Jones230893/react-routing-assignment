@@ -1,7 +1,10 @@
+import { useContext } from "react"
+import { CartFunctionContext } from "../../context/CartFunctionContext"
 import styles from "./categoryProducts.module.css"
 import ProductCard from "../ProductCard"
 
-const CategoryProducts = ({addToCart, productArray}) => {
+const CategoryProducts = ({productArray}) => {
+  const {addToCart} = useContext(CartFunctionContext)
 
   return (
     <div className={styles.displayWrapper}>

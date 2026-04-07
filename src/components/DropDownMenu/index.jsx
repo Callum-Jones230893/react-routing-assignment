@@ -4,7 +4,7 @@ import { pages } from "../../data/data"
 import styles from "./dropDownMenu.module.css"
 import DropDownSubMenu from "../DropDownSubMenu"
 
-const DropDownMenu = ({menuDisplay, toggleCart, toggleMenu, products, toggleSubMenu, displaySub}) => {
+const DropDownMenu = ({menuDisplay, toggleMenu, products, toggleSubMenu, displaySub}) => {
 
   return (
     <div className={styles.dropDownWrapper}>

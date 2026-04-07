@@ -1,7 +1,13 @@
+import { useContext } from "react"
 import { NavLink } from "react-router-dom"
+import { CartFunctionContext } from "../../context/CartFunctionContext"
+import useRandomProduct from "../../hooks/useRandomProduct"
 import styles from "./hero.module.css"
 
-const Hero = ({addToCart, heroProduct}) => {
+const Hero = () => {
+  const {heroProduct} = useRandomProduct() 
+  const {addToCart} = useContext(CartFunctionContext)
+
   return (
     <>
       {heroProduct.map((product, index) => (

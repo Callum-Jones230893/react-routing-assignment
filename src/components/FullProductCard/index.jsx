@@ -1,6 +1,10 @@
+import { useContext } from "react"
+import { CartFunctionContext } from "../../context/CartFunctionContext"
 import styles from "./fullProduct.module.css"
 
-const FullProductCard = ({product, addItems}) => {
+const FullProductCard = ({product}) => {
+  const {addToCart} = useContext(CartFunctionContext)
+
   return (
     <div className={styles.fullProductWrapper}>
       <div className={styles.top}>
@@ -15,7 +19,7 @@ const FullProductCard = ({product, addItems}) => {
         <div>{product.information}</div>
         <div>{product.contents}</div>
         <div>{product.price}</div>
-        <span onClick={() => addItems(product)}>Add to cart</span>
+        <span onClick={() => addToCart(product)}>Add to cart</span>
       </div>
     </div>
   )
