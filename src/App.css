@@ -39,7 +39,6 @@ span,
 a {
   color: inherit;
   cursor: pointer;
-  /* font-style: italic; */
   letter-spacing: 1px;
   text-decoration: underline 1px var(--font-two);
 }

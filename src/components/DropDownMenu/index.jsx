@@ -4,12 +4,12 @@ import { pages } from "../../data/data"
 import styles from "./dropDownMenu.module.css"
 import DropDownSubMenu from "../DropDownSubMenu"
 
-const DropDownMenu = ({menuDisplay, toggleMenu, products, toggleSubMenu, displaySub}) => {
+const DropDownMenu = ({menuDisplay, toggleMenu, toggleSubMenu, displaySub}) => {
 
   return (
     <div className={styles.dropDownWrapper}>
-      {!menuDisplay ? <ArrowFatLinesDownIcon size={28} onClick={toggleMenu} />
-                    : <ArrowFatLinesUpIcon size={28} onClick={toggleMenu} />}
+      {!menuDisplay ? <ArrowFatLinesDownIcon size={28} className={styles.dropDownIcon} onClick={toggleMenu} />
+                    : <ArrowFatLinesUpIcon size={28} className={styles.dropDownIcon} onClick={toggleMenu} />}
       <div className={`${styles.dropDownContent} ${menuDisplay ? styles.displayDropDown : ``}`}>
         {pages.map((navigation, index) => (
           <div key={index} className={styles.navItemWrapper}>
@@ -19,7 +19,6 @@ const DropDownMenu = ({menuDisplay, toggleMenu, products, toggleSubMenu, display
           </div>
         ))}
         <DropDownSubMenu 
-          products={products}
           toggleMenu={toggleMenu}
           toggleSub={toggleSubMenu}
           displaySubMenu={displaySub}

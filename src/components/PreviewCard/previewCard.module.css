@@ -9,7 +9,7 @@
   .previewContentWrapper {
     display: flex;
     flex-direction: column;
-    /* overflow-x: auto; */
+    grid-template-columns: none;
   }
 }
 

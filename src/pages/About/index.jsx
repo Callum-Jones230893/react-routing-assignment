@@ -1,10 +1,8 @@
-import { Outlet } from "react-router-dom"
+import AboutContent from "../../components/AboutContent"
 
 const About = () => {
   return (
-    <>
-      <Outlet />
-    </>
+    <AboutContent />
   )
 }
 

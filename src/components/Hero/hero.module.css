@@ -1,10 +1,9 @@
 .heroWrapper {
   align-items: center;
   background: var(--background-one);
-  border-top: 2px solid var(--border-one);
+  border-top: 1px solid var(--border-one);
   display: grid;
-  /* flex: 1; */
-  height: 500px;
+  min-height: 500px;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   padding: 30px 36px;
@@ -12,6 +11,7 @@
 
 @media (max-width: 768px) {
   .heroWrapper {
+    border-top: 1px solid var(--border-one);
     display: flex;
     flex: 1;
     flex-direction: column;

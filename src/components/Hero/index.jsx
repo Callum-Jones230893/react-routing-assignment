@@ -1,16 +1,14 @@
 import { useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { CartFunctionContext } from "../../context/CartFunctionContext"
-import useRandomProduct from "../../hooks/useRandomProduct"
 import styles from "./hero.module.css"
 
-const Hero = () => {
-  const {heroProduct} = useRandomProduct() 
+const Hero = ({hero}) => {
   const {addToCart} = useContext(CartFunctionContext)
 
   return (
     <>
-      {heroProduct.map((product, index) => (
+      {hero.map((product, index) => (
         <div className={styles.heroWrapper} key={index}>
           <div className={styles.mainCardWrapper} >
             <div className={styles.mainCardInnerWrapper}>

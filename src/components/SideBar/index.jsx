@@ -1,10 +1,20 @@
-import { NavLink } from "react-router-dom"
+import { useMemo, useContext } from "react"
+import { NavLink, useLocation } from "react-router-dom"
+import { UserCircleIcon, ShoppingBagIcon, ShoppingBagOpenIcon } from "@phosphor-icons/react"
+import { AllProductContext } from "../../context/AllProductContext"
 import styles from "./sideBar.module.css"
-import { UserCircleIcon, ShoppingBagIcon } from "@phosphor-icons/react"
+import Filters from "../Filters"
 
-const SideBar = ({products}) => {
-  const categoryGroups = Object.groupBy(products, ({category}) => category)
-  const groupsArray = Array.from(Object.entries(categoryGroups))
+const SideBar = () => {
+  const {allProductsArray} = useContext(AllProductContext)
+
+  const location = useLocation()
+  const isCheckout = location.pathname === "/checkout"
+
+  const groupsArray = useMemo(() => {
+    const categoryGroups = Object.groupBy(allProductsArray, ({category}) => category)
+    return Array.from(Object.entries(categoryGroups))
+  }, [allProductsArray])
 
   return (
     <div className={styles.sideBarWrapper}>
@@ -22,11 +32,14 @@ const SideBar = ({products}) => {
           ))}
         </div>
         <div className={styles.sideBarSection}>
-          <div className={styles.sideBarItem}>filter by prices placeholder</div>
+          <Filters />
         </div>
         <div className={styles.sideBarSection}>
           <div className={styles.iconContainer}>
-            <ShoppingBagIcon size={28}  className={styles.cartIcon} />
+            {isCheckout
+              ? <NavLink to={"/checkout"}><ShoppingBagOpenIcon size={28}  className={styles.cartIcon} /></NavLink> 
+              : <NavLink to={"/checkout"}><ShoppingBagIcon size={28}  className={styles.cartIcon} /></NavLink>
+            }
             <UserCircleIcon size={32} className={styles.loginIcon} />
           </div>
         </div>

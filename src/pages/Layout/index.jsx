@@ -4,13 +4,13 @@ import Header from "../../components/Header"
 import SideBar from "../../components/SideBar"
 import Footer from "../../components/Footer"
 
-const Layout = ({productArray}) => {
+const Layout = () => {
 
   return (
     <div className={styles.layoutWrapper}>
-      <Header products={productArray} />
+      <Header />
       <div className={styles.mainContent}>
-        <SideBar products={productArray} />
+        <SideBar />
         <div className={styles.pageContent}>
           <Outlet />
         </div>

@@ -15,8 +15,8 @@ const ProductCard = ({product}) => {
       </div>
       <div className={styles.bottom}>
         <div className={styles.bottomDiv}>
-          <div>{product.name}</div>
-          <div>{product.price} SEK</div>
+          <p>{product.name}</p>
+          <p>{product.price} SEK</p>
           <span onClick={() => addToCart(product)}>Add to cart</span>
           <NavLink className={styles.productNav} to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
         </div>

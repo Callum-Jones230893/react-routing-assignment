@@ -1,13 +1,16 @@
+import { useContext } from "react"
 import { useParams } from "react-router-dom"
 import FullProductCard from "../../../components/fullProductCard"
+import { AllProductContext } from "../../../context/AllProductContext"
 
-const ProductInformation = ({allProducts}) => {
+const ProductInformation = () => {
   const {name} = useParams()
+  const {allProductsArray} = useContext(AllProductContext)
   
 
   const filteredProductByName = name
-  ? allProducts.filter(product => product.name.toLowerCase().replace(/\s+/g, '') === name.toLowerCase().replace(/\s+/g, ''))
-  : allProducts
+  ? allProductsArray.filter(product => product.name.toLowerCase().replace(/\s+/g, '') === name.toLowerCase().replace(/\s+/g, ''))
+  : allProductsArray
   
   console.log(filteredProductByName)
 

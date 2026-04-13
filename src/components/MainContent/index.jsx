@@ -2,11 +2,11 @@ import styles from "./mainContent.module.css"
 import Hero from "../Hero"
 import PreviewContent from "../PreviewContent"
 
-const MainContent = () => {
+const MainContent = ({heroItem, previewItems}) => {
   return (
     <div className={styles.mainWrapper}>
-      <Hero />
-      <PreviewContent />
+      <Hero hero={heroItem} />
+      <PreviewContent preview={previewItems} />
     </div>
   )
 }

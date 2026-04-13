@@ -1,0 +1,47 @@
+.checkoutSummaryWrapper {
+  background: var(--background-one);
+  border-top: 2px solid var(--border-one);
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px;
+  min-height: 50%;
+}
+
+.cartTitle {
+  color: var(--font-four);
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.checkoutInnerWrapper {
+  display: flex;
+  flex: 1;
+  height: 80%;
+  justify-content: center;
+}
+
+.checkoutItemWrapper {
+  align-items: center;
+  background: var(--background-one);
+  color: var(--font-three);
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  padding: 12px;
+}
+
+.itemQtyContainer {
+  background: var(--background-one);
+  display: flex;
+}
+
+.totalPrice {
+  background-color: var(--background-one);
+  color: var(--font-four);
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}

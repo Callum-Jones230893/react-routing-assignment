@@ -9,8 +9,8 @@ const CartItem = () => {
     <div>
       {shoppingCart.map((product, index) =>
         <div className={styles.cartItemWrapper} key={index}>
-          <div>{product.name}</div>
-          <div>{product.price * product.quantity}</div>
+          <p>{product.name}</p>
+          <p>{product.price * product.quantity}</p>
           <div className={styles.itemQtyContainer}>
             <span className={styles.qtyToggle}>-</span>
             <div>{product.quantity}</div>

@@ -6,9 +6,9 @@ const useNav = () => {
   const [displaySubMenu, setDisplaySubMenu] = useState(false)
 
   useEffect(() => {
-    document.body.style.overflow =  displayMenu ? "hidden" : "unset"
+    document.body.style.overflow =  displayMenu || displayCart ? "hidden" : "unset"
     return () => { document.body.style.overflow = "unset"}
-  }, [displayMenu])
+  }, [displayMenu, displayCart])
 
   const showCart = () => {
     setDisplayCart(!displayCart)

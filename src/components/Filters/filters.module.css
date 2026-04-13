@@ -1,0 +1,8 @@
+.filterWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterGroup {
+  font-style: italic;
+}

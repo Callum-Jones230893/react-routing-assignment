@@ -1,13 +1,9 @@
-import { Outlet } from "react-router-dom"
 import MainContent from "../../components/MainContent"
 
-const Home = ({heroItem, previewItems}) => {
+const Home = ({randomHero, randomPreview}) => {
 
   return (
-    <>
-      <MainContent randomHeroProduct={heroItem} randomPreviewItems={previewItems} />
-      <Outlet />
-    </>
+    <MainContent heroItem={randomHero} previewItems={randomPreview} />
   )
 }
 

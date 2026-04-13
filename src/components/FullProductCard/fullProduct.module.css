@@ -38,12 +38,16 @@
 .bottom {
   background-color: var(--background-four);
   border-top: 1px solid var(--border-one);
+  width: 100%;
+}
+
+.textWrapper {
   color: var(--font-five);
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: auto;
   overflow-y: auto;
-  width: 100%;
+  padding: 15px;
 }
 
 .productTitle {

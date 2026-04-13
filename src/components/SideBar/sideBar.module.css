@@ -1,9 +1,9 @@
 .sideBarWrapper {
   background: var(--background-three);
   border-right: 1px solid var(--border-one);
+  border-top: 2px solid var(--border-one);
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 210px;
 }
 

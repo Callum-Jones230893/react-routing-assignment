@@ -6,7 +6,7 @@ import styles from "./navigation.module.css"
 import DropDownMenu from "../DropDownMenu";
 import ShoppingCart from "../ShoppingCart";
 
-const Navigation = ({productArray}) => {
+const Navigation = () => {
   const {displayCart, displayMenu, displaySubMenu, showCart, showMenu, showSubMenu} = useNav();
 
   return (
@@ -26,7 +26,6 @@ const Navigation = ({productArray}) => {
       <DropDownMenu
         displaySub={displaySubMenu}
         menuDisplay={displayMenu}
-        products={productArray}
         toggleMenu={showMenu}
         toggleSubMenu={showSubMenu}
       />

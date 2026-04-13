@@ -1,10 +1,16 @@
+import { useMemo, useContext } from "react"
 import { NavLink } from "react-router-dom"
+import { AllProductContext } from "../../context/AllProductContext"
 import styles from "./dropDownSubMenu.module.css"
 
 
-const DropDownSubMenu = ({products, toggleMenu, toggleSub, displaySubMenu}) => {
-  const categoryGroups = Object.groupBy(products, ({category}) => category)
-  const groupsArray = Array.from(Object.entries(categoryGroups))
+const DropDownSubMenu = ({toggleMenu, toggleSub, displaySubMenu}) => {
+  const {allProductsArray} = useContext(AllProductContext)
+
+  const groupsArray = useMemo(() => {
+    const categoryGroups = Object.groupBy(allProductsArray, ({category}) => category)
+    return Array.from(Object.entries(categoryGroups))
+  }, [allProductsArray])
 
   return (
     <div className={styles.subMenuSection}>

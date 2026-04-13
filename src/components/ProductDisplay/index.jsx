@@ -1,13 +1,17 @@
+import { useContext } from "react"
+import { AllProductContext } from "../../context/AllProductContext"
 import styles from "./productDisplay.module.css"
 import ProductCard from "../ProductCard"
 
-const ProductDisplay = ({productArray}) => {
+const ProductDisplay = () => {
+  const {allProductsArray} = useContext(AllProductContext)
+
   return (
     <div className={styles.displayWrapper}>
-      <h3>{productArray[0]?.category}</h3>
+      <h3>{allProductsArray[0]?.category}</h3>
       <div className={styles.displayInnerWrapper}>
-        {productArray.map((product, index) => (
-          <ProductCard key={index} product={product} allProducts={productArray} />
+        {allProductsArray.map((product, index) => (
+          <ProductCard key={index} product={product} />
         ))}
       </div>
     </div>

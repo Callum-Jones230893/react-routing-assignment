@@ -1,16 +1,15 @@
 import { useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { CartFunctionContext } from "../../context/CartFunctionContext"
-import styles from "./previewCard.module.css"
+import styles from "./randomProductCard.module.css"
 
-const PreviewCard = ({previewDisplay}) => {
-  // const {previewProducts} = useRandomProduct()
+const RandomProductCard = ({}) => {
   const {addToCart} = useContext(CartFunctionContext)
 
   return (
-    <div className={styles.previewContentWrapper}>
-      {previewDisplay.map((product, index) => (
-        <div className={styles.previewProductCards} key={index}>
+    <div className={styles.randomContentWrapper}>
+      {/* {recommendedProducts.map((product, index) => (
+        <div className={styles.randomProductCards} key={index}>
           <div className={styles.top}>
             <div className={styles.imageWrapper}>
               {product.image && <img src={product.image} alt={product.name} />}
@@ -25,9 +24,9 @@ const PreviewCard = ({previewDisplay}) => {
             <NavLink className={styles.productNav} to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
           </div>
         </div>
-      ))}
+      ))} */}
     </div>
   )
 }
 
-export default PreviewCard
+export default RandomProductCard
