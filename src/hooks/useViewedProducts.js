@@ -1,35 +1,77 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { useLocation } from "react-router-dom"
+import { AllProductContext } from "../context/AllProductContext"
+import randomProduct from "../utils/randomProduct"
 
 const useViewedProducts = () => {
   const location = useLocation()
+  const [mostViewedCategory, setMostViewedCategory] = useState(null)
+  const [secondMostViewedCategory, setSecondMostViewedCategory] = useState(null)
   
   const [viewed, setViewed] = useState(() => {
     const stored = localStorage.getItem("recommended")
     return stored ? JSON.parse(stored) : []
   })
-
+  
   useEffect(() => {
     const path = location.pathname
-
+    
     setViewed(recent => 
       path.startsWith("/products/") && !recent.includes(path)
       ? [...recent, path].slice(-10)
       : recent
     ) 
   }, [location.pathname])
-
+  
   useEffect(() => {
     localStorage.setItem("recommended", JSON.stringify(viewed))
   }, [viewed])
-
+  
+  useEffect(() => {
   const productCategory = viewed.map(path => path.split("/")[2])
-
   const categories = Object.groupBy(productCategory, category => category)
   const categoryCount = Object.fromEntries(Object.entries(categories).map(([key, value]) => [key, value.length]))
+  
+  let mostViewed = null
+  let secondMostViewed = null 
+  let mostViewedCount = 0
+  let secondMostViewedCount = 0
+  
+    for (const [category, count] of Object.entries(categoryCount)) {
+      if (count > mostViewedCount) {
+        secondMostViewed = mostViewed
+        secondMostViewedCount = mostViewedCount
+        
+        mostViewedCount = count
+        mostViewed = category
+      } else if (count > secondMostViewedCount) {
+        secondMostViewedCount = count
+        secondMostViewed = category
+      }
+    }
+    setMostViewedCategory(mostViewed)
+    setSecondMostViewedCategory(secondMostViewed)
+  }, [viewed])
 
-  console.log(categoryCount)
+  const { allProductsArray } = useContext(AllProductContext)
+  
+  const mostViewedFilter = mostViewedCategory
+    ? allProductsArray.filter(product => mostViewedCategory.includes(product.category))
+    : allProductsArray
 
+  const secondMostFilter = secondMostViewedCategory
+    ? allProductsArray.filter(product => secondMostViewedCategory.includes(product.category))
+    : allProductsArray
+
+  const recommendedMainItems = () => {
+    const recommended = randomProduct(mostViewedFilter, 3)
+  }
+
+  const recommendedSecondaryItems = () => {
+    const recommended = randomProduct(secondMostFilter, 1)
+  }
+
+  return {recommendedMainItems, recommendedSecondaryItems}
 }
 
 export default useViewedProducts

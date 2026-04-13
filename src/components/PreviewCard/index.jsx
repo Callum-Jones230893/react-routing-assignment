@@ -21,8 +21,8 @@ const PreviewCard = ({previewDisplay}) => {
               <p>{product.name}</p>
               <p>{product.price} SEK</p>
               <span onClick={() => addToCart(product)}>Add to cart</span>
+              <NavLink className={styles.productNav} to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
             </div>
-            <NavLink className={styles.productNav} to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
           </div>
         </div>
       ))}

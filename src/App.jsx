@@ -7,7 +7,7 @@ import Home from './pages/Home'
 import Products from './pages/Products'
 import About from './pages/About'
 import Checkout from './pages/Checkout'
-import Account from './pages/Account'
+// import Account from './pages/Account'
 import ProductInformation from './pages/Products/ProductInformation'
 import { AllProductProvider } from './context/AllProductContext'
 import useRandomProduct from './hooks/useRandomProduct'
@@ -30,7 +30,7 @@ function App() {
                 </Route>
                 <Route path="/about" element={<About />} />
                 <Route path="/checkout" element={<Checkout />} />
-                <Route path="/myaccount" element={<Account />} />
+                {/* <Route path="/myaccount" element={<Account />} /> */}
               </Route>
             </Routes>
           </CartFunctionProvider>

@@ -40,7 +40,7 @@ const SideBar = () => {
               ? <NavLink to={"/checkout"}><ShoppingBagOpenIcon size={28}  className={styles.cartIcon} /></NavLink> 
               : <NavLink to={"/checkout"}><ShoppingBagIcon size={28}  className={styles.cartIcon} /></NavLink>
             }
-            <UserCircleIcon size={32} className={styles.loginIcon} />
+            {/* <UserCircleIcon size={32} className={styles.loginIcon} /> */}
           </div>
         </div>
       </div>

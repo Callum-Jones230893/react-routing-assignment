@@ -1,6 +1,6 @@
 export const pages = [
   {"id" : 1, "page" : "", "name" : "Home"},
-  {"id" : 3, "page" : "myaccount", "name" : "My Account"},
+  // {"id" : 3, "page" : "myaccount", "name" : "My Account"},
   {"id" : 2, "page" : "About", "name" : "About"},
 ]
 

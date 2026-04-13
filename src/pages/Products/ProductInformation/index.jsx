@@ -11,8 +11,6 @@ const ProductInformation = () => {
   const filteredProductByName = name
   ? allProductsArray.filter(product => product.name.toLowerCase().replace(/\s+/g, '') === name.toLowerCase().replace(/\s+/g, ''))
   : allProductsArray
-  
-  console.log(filteredProductByName)
 
   return (
     <>

@@ -8,9 +8,10 @@ import randomProduct from "../utils/randomProduct"
   
   const { miniatures, paints, accessories } = useProducts()
   const allProductsArray = [...miniatures, ...paints, ...accessories]
+  const heroProductArray = [...miniatures]
   
   const randomHeroProduct = () => {
-    const randomizedProduct = randomProduct(allProductsArray, 1)
+    const randomizedProduct = randomProduct(heroProductArray, 1)
     setHeroProduct(randomizedProduct)
   }
 

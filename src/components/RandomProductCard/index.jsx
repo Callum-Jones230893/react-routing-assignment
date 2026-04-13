@@ -1,14 +1,16 @@
 import { useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { CartFunctionContext } from "../../context/CartFunctionContext"
+import useViewedProducts from "../../hooks/useViewedProducts"
 import styles from "./randomProductCard.module.css"
 
 const RandomProductCard = ({}) => {
   const {addToCart} = useContext(CartFunctionContext)
+  const {mostViewedFilter, secondMostFilter} = useViewedProducts()
 
   return (
     <div className={styles.randomContentWrapper}>
-      {/* {recommendedProducts.map((product, index) => (
+      {/* {mostViewedFilter.map((product, index) => (
         <div className={styles.randomProductCards} key={index}>
           <div className={styles.top}>
             <div className={styles.imageWrapper}>
