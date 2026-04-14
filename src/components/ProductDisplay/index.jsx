@@ -5,7 +5,7 @@ import ProductCard from "../ProductCard"
 
 const ProductDisplay = () => {
   const {allProductsArray} = useContext(AllProductContext)
-
+  
   return (
     <div className={styles.displayWrapper}>
       <h3>{allProductsArray[0]?.category}</h3>

@@ -2,7 +2,6 @@ import styles from "./recommendedItems.module.css"
 import RandomProductCard from "../RandomProductCard"
 
 const RecommendedItems = () => {
-
   return (
     <div className={styles.recommendedWrapper}>
       <div className={styles.recommendedHeader}>

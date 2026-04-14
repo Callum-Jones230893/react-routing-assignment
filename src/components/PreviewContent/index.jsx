@@ -13,3 +13,6 @@ const PreviewContent = ({preview}) => {
 }
 
 export default PreviewContent
+
+// check path, if path === checkout, display recommended
+//                     === Home, display Preview

@@ -4,7 +4,6 @@ import { CartFunctionContext } from "../../context/CartFunctionContext"
 import styles from "./previewCard.module.css"
 
 const PreviewCard = ({previewDisplay}) => {
-  // const {previewProducts} = useRandomProduct()
   const {addToCart} = useContext(CartFunctionContext)
 
   return (
