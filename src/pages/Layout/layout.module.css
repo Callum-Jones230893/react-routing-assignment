@@ -1,7 +1,7 @@
 .layoutWrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 
 .mainContent {
@@ -13,4 +13,5 @@
   display: flex;
   flex: 1;
   flex-direction: column;
+  /* height: 100%; */
 }

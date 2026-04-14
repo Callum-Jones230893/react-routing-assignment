@@ -10,7 +10,7 @@ const DropDownSubMenu = ({toggleMenu, toggleSub, displaySubMenu}) => {
   const groupsArray = useMemo(() => {
     const categoryGroups = Object.groupBy(allProductsArray, ({category}) => category)
     return Array.from(Object.entries(categoryGroups))
-  }, [allProductsArray])
+  }, [allProductsArray]) 
 
   return (
     <div className={styles.subMenuSection}>

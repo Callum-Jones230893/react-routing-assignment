@@ -6,11 +6,11 @@ import styles from "./randomProductCard.module.css"
 
 const RandomProductCard = ({}) => {
   const {addToCart} = useContext(CartFunctionContext)
-  const {mostViewedFilter, secondMostFilter} = useViewedProducts()
+  const {recommended} = useViewedProducts()
 
   return (
     <div className={styles.randomContentWrapper}>
-      {/* {mostViewedFilter.map((product, index) => (
+      {recommended.map((product, index) => (
         <div className={styles.randomProductCards} key={index}>
           <div className={styles.top}>
             <div className={styles.imageWrapper}>
@@ -26,7 +26,7 @@ const RandomProductCard = ({}) => {
             <NavLink className={styles.productNav} to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
           </div>
         </div>
-      ))} */}
+      ))}
     </div>
   )
 }

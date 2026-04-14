@@ -20,6 +20,8 @@ const FullProductCard = ({product}) => {
           <p>{product.information}</p>
           <p>{product.contents}</p>
           <p>{product.price}</p>
+        </div>
+        <div className={styles.clickWrapper}>
           <span onClick={() => addToCart(product)}>Add to cart</span>
           <span>Back..</span>
         </div>
