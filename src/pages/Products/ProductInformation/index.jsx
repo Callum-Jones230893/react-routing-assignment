@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { useParams } from "react-router-dom"
-import FullProductCard from "../../../components/fullProductCard"
+import FullProductCard from "../../../components/FullProductCard"
 import { AllProductContext } from "../../../context/AllProductContext"
 
 const ProductInformation = () => {
