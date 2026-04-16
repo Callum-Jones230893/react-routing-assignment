@@ -41,10 +41,22 @@
 }
 
 .navItem {
-  color: inherit;
+  color: var(--font-two);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.navItem:hover {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.activeNav {
+  color: var(--font-four);
+  font-style: italic;
 }
 
 .productCount {
@@ -54,11 +66,12 @@
 }
 
 .productCount:hover {
-  font-weight: normal;
+  cursor: default;
 }
 
 .iconContainer {
   align-items: center;
+  color: var(--font-two);
   display: flex;
   flex-direction: column;
   gap: 32px;

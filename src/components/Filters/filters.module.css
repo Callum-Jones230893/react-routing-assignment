@@ -4,5 +4,18 @@
 }
 
 .filterGroup {
+  color: var(--font-two);
   font-style: italic;
+}
+
+.filterNav {
+  color: var(--font-two);
+  cursor: pointer;
+  display: flex;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.filterNav:hover {
+  font-weight: normal;
 }

@@ -39,19 +39,21 @@
 .bottom {
   background-color: var(--background-four);
   border-top: 1px solid var(--border-one);
+  color: var(--font-two);
   display: flex;
   flex-direction: column;
   height: 90%;
+  letter-spacing: 1px;
   overflow: hidden;
+  padding-top: 15px;
   width: 100%;
 }
 
 .textWrapper {
-  color: var(--font-five);
   display: flex;
   flex: 1;
   flex-direction: column;
-  min-height: 80%;
+  min-height: 70%;
   overflow-y: auto;
   padding: 15px;
 }

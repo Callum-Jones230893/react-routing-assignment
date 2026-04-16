@@ -9,18 +9,14 @@
   justify-content: space-between;
 }
 
-@media (max-width: 768px) {
-  .headerWrapper {
-    padding: 13px 28px;
-  }
-}
-
 .titleWrapper {
   display: flex;
 }
 
 .title {
+  font-family: "Amarante", serif;
   font-size: 3rem;
+  font-style: italic;
 }
 
 @media (max-width: 1028px) {

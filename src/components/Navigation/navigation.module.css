@@ -20,6 +20,10 @@
   text-decoration: underline;
 }
 
+.activeNav {
+  color: var(--font-four);
+}
+
 @media (max-width: 768px) {
   .navItem {
     display: none;

@@ -14,7 +14,7 @@ const Navigation = () => {
       <nav className={styles.navigationWrapper}>
         {pages.map((navigation, index) => (
           <div key={index}>
-            <NavLink className={styles.navItem} to={`/${navigation.page}`}>{navigation.name}</NavLink>
+            <NavLink className={({ isActive }) => isActive ? `${styles.activeNav} ${styles.navItem}` : styles.navItem} to={`/${navigation.page}`}>{navigation.name}</NavLink>
           </div>
         ))}
         <div>

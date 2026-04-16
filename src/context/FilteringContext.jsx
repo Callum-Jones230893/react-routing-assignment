@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useMemo } from "react";
 import { AllProductContext } from "./AllProductContext"
 
 export const FilteringContext = createContext()
@@ -6,23 +6,26 @@ export const FilteringContext = createContext()
 export const FilteringProvider = ({children}) => {
   const { allProductsArray } = useContext(AllProductContext)
   
-  const [filteredByPrice, setFilteredByPrice] = useState([])
   const [filteredByBrand, setFilteredByBrand] = useState([])
   const [filteredByColour, setFilteredByColour] = useState([])
 
-  const filteredArray = [...allProductsArray]
+  const filteredProducts = useMemo(() => {
+    let filteredArray = [...allProductsArray];
+    
+    if (filteredByBrand.length > 0) {
+      filteredArray = filteredArray.filter(product => 
+        filteredByBrand.includes(product.brand)
+      )
+    }
 
-  const priceFilter = filteredByPrice
-    ? allProductsArray.filter(product => product.price >= filteredByPrice[0] && product.price <= filteredByPrice[1])
-    : allProductsArray
-  
-  const brandFilter = filteredByBrand
-    ? allProductsArray.filter(product => filteredByBrand.includes(product.brand))
-    : allProductsArray
+    if (filteredByColour.length > 0) {
+      filteredArray = filteredArray.filter(product => 
+        filteredByColour.includes(product.colour)
+      )
+    }
 
-  const colourFilter = filteredByColour
-    ? allProductsArray.filter(product => filteredByColour.includes(product.colour))
-    : allProductsArray
+    return filteredArray
+  }, [allProductsArray, filteredByBrand, filteredByColour])
 
   const handleBrand = (brand) => {
     setFilteredByBrand(selected =>
@@ -32,19 +35,22 @@ export const FilteringProvider = ({children}) => {
     )
   }
 
+  const handleColour = (colour) => {
+    setFilteredByColour(selected =>
+      selected.includes(colour)
+        ? selected.filter(choice => choice !== colour)
+        : [...selected, colour]
+    )
+  }
+
   return (
     <FilteringContext.Provider 
       value={{
-          filteredByPrice,
+          filteredProducts,
           filteredByBrand,
           filteredByColour,
-          setFilteredByPrice,
-          setFilteredByBrand,
-          setFilteredByColour,
-          priceFilter, 
-          brandFilter, 
-          colourFilter,
-          handleBrand
+          handleBrand,
+          handleColour
         }}>
       {children}
     </FilteringContext.Provider>

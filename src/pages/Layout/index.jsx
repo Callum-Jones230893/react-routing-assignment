@@ -4,6 +4,7 @@ import Header from "../../components/Header"
 import SideBar from "../../components/SideBar"
 import Footer from "../../components/Footer"
 
+
 const Layout = () => {
 
   return (

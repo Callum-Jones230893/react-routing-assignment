@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Archivo+Black&family=Inconsolata:wght@200..900&family=Slabo+27px&display=swap');
+
 :root {
   --background-one: #2a2018;
   --background-two: #1a1408;
@@ -20,10 +22,10 @@
 
 html,
 body {
-  background-color: var(--background-tertiary);
   box-sizing: border-box;
-  margin: 0;
+  font-family: "Amarante", serif;
   width: 100%;
+  margin: 0;
 }
 
 #root {
@@ -40,10 +42,21 @@ a {
   color: inherit;
   cursor: pointer;
   letter-spacing: 1px;
+  text-decoration: none;
+}
+
+a {
   text-decoration: underline 1px var(--font-two);
 }
 
 span:hover,
 a:hover {
   font-weight: bold;
+}
+
+h3 {
+  color: var(--font-four);
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 2px;
 }

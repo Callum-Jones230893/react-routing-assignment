@@ -1,12 +1,16 @@
 .cartItemWrapper {
-  color: black;
+  align-items: center;
+  color: var(--font-four);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  padding: 10px;
 }
 
 .itemQtyContainer {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
 .qtyToggle {

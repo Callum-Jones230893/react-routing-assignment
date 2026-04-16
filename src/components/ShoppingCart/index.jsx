@@ -12,7 +12,7 @@ const ShoppingCart = ({displayed}) => {
       <div className={`${styles.shoppingCartContent} ${displayed ? styles.displayCart : ``}`}>
         <CartItem />
         <div className={styles.checkoutWrapper}>
-          <span className={styles.totalPrice}>{cartTotal}</span>
+          <span className={styles.totalPrice}>Total: {cartTotal} :-</span>
           <NavLink className={styles.navItem} to={"/checkout"}>Checkout</NavLink>
         </div>
       </div>

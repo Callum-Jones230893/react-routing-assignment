@@ -8,7 +8,7 @@
   width: calc(20% - 10px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .productCard {
     width: 80%;
   }

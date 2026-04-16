@@ -31,8 +31,8 @@
     max-height: 0px;
     overflow: hidden;
     position: absolute;
-    right: -28px;
-    top: 71px;
+    right: 0;
+    top: 72px;
     transition:max-height 400ms ease-in-out;
     width: 100vw;
   }

@@ -1,41 +1,45 @@
 import { useContext } from "react"
+import { NavLink } from "react-router-dom"
 import { FilteringContext } from "../../context/FilteringContext"
 import styles from "./filters.module.css"
+import { AllProductContext } from "../../context/AllProductContext"
 
 const Filters = () => {
   const {
-    filteredByPrice,
+    brandArray,
+    colourArray
+  } = useContext(AllProductContext)
+
+  const { 
     filteredByBrand,
-    filteredByColour,
-    setFilteredByPrice,
-    setFilteredByBrand,
-    setFilteredByColour,
-    priceFilter, 
-    brandFilter,
-    colourFilter,
-    handleBrand
+    filteredByColour, 
+    handleBrand,
+    handleColour,
   } = useContext(FilteringContext)
 
   return (
     <>
       <div className={styles.filterWrapper}>
-        <p className={styles.filterGroup}>By Price : </p>
-        <label>
-          <input type="checkbox" name="" id="" /> 0 - 300kr
-        </label>
-      </div>
-      <div className={styles.filterWrapper}>
         <p className={styles.filterGroup}>By Brand :</p>
-        <label>
-          <input type="checkbox" name="" id="" /> Games Workshop
-        </label>
+        {brandArray.map(([key], index) => (
+          <label key={index}>
+            <NavLink className={styles.filterNav} to={`/products`}>
+              <input type="checkbox" checked={filteredByBrand.includes(key)} onChange={() => handleBrand(key)}/>
+              {key}
+            </NavLink>
+          </label>
+        ))}
       </div>
-      {/* useLocation for paints only and put in datafile to loop through*/}
       <div className={styles.filterWrapper}>
         <p className={styles.filterGroup}>By Color :</p>
-        <label>
-          <input type="checkbox" name="" id="" /> Black
-        </label>
+        {colourArray.map(([key], index) => (
+          <label key={index}>
+            <NavLink className={styles.filterNav} to={`/products`}>
+              <input type="checkbox" checked={filteredByColour.includes(key)} onChange={() => handleColour(key)}/>
+              {key}
+            </NavLink>
+          </label>
+        ))}
       </div>
     </>
   )

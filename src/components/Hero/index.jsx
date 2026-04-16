@@ -15,7 +15,7 @@ const Hero = ({hero}) => {
               <h3 className={styles.newItemsTitle}>New Product!</h3>
               <h2 className={styles.heroTitle}>{product.name}</h2>
               <p className={styles.heroInformation}>{product.description}</p>
-              <span onClick={() => addToCart(product)}>Add to cart - {product.price} SEK</span>
+              <span onClick={() => addToCart(product)}>Add to cart {product.price} :-</span>
             </div>
           </div>
           <div className={styles.sideCard} key={index}>

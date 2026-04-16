@@ -67,8 +67,8 @@
   display: flex;
   font-size: 14px;
   flex-direction: column;
-  height: 90%;
-  letter-spacing: 1px;
+  height: 70%;
+  letter-spacing: 2px;
   padding: 20px;
   width: 30%;
 }

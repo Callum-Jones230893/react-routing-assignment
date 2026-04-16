@@ -30,18 +30,25 @@
   gap: 25px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
+  letter-spacing: 1px;
+  margin-right: 4%;
   padding: 12px;
 }
 
 .itemQtyContainer {
+  align-items: center;
   background: var(--background-one);
   display: flex;
+  gap: 10px;
 }
 
 .totalPrice {
+  align-items: center;
   background-color: var(--background-one);
-  color: var(--font-four);
+  color: var(--font-two);
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   justify-content: center;
-  padding: 50px;
+  padding: 40px;
 }

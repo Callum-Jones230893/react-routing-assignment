@@ -1,6 +1,7 @@
 import { useMemo, useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { AllProductContext } from "../../context/AllProductContext"
+import { CaretDoubleDownIcon, CaretDoubleUpIcon } from "@phosphor-icons/react"
 import styles from "./dropDownSubMenu.module.css"
 
 
@@ -14,7 +15,7 @@ const DropDownSubMenu = ({toggleMenu, toggleSub, displaySubMenu}) => {
 
   return (
     <div className={styles.subMenuSection}>
-      <span className={styles.subMenuToggle} onClick={toggleSub}>Products</span>
+      <span className={styles.subMenuToggle} onClick={toggleSub}>Products {!displaySubMenu ? <CaretDoubleDownIcon size={14} /> : <CaretDoubleUpIcon size={14} />}</span>
       <div className={`${styles.subMenuWrapper} ${displaySubMenu ? styles.displaySubMenu : ``}`}>
         <div className={styles.navItemWrapper}>
             <NavLink className={styles.navItem} to="/products">All Products</NavLink>

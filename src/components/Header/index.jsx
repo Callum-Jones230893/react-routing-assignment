@@ -7,7 +7,7 @@ const Header = () => {
     <div className={styles.headerWrapper}>
       <Logo />
       <div className={styles.titleWrapper}>
-        <h1 className={styles.title}>Welcome</h1>
+        <h1 className={styles.title}>The Warpstone Emporium</h1>
       </div>
       <Navigation />
     </div>

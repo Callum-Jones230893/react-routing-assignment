@@ -9,7 +9,7 @@ const Products = () => {
   const {allProductsArray} = useContext(AllProductContext)
 
   const filteredProducts = category
-    ? allProductsArray.filter(product => product.category === category)
+    ? allProductsArray.filter(product => product.category.toLowerCase() === category.toLowerCase())
     : allProductsArray
 
   return (

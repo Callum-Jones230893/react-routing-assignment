@@ -74,7 +74,6 @@ const useViewedProducts = () => {
     if(!mostViewedCategory && !secondMostViewedCategory) {
       const fallback = randomProduct(allProductsArray, 4)
       setRecommended(fallback)
-
       return 
     } 
 
@@ -86,7 +85,7 @@ const useViewedProducts = () => {
     setRecommended([...mostLooked, ...secondLooked])
   }, [mostViewedCategory, secondMostViewedCategory, allProductsArray])
 
-  // console.log(recommended)
+
   return {recommended}
 }
 

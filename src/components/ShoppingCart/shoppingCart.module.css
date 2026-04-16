@@ -23,7 +23,7 @@
 @media (max-width: 768px) {
   .shoppingCartContent {
     top: 126px;
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -36,15 +36,14 @@
 }
 
 .checkoutWrapper {
+  color: var(--font-three);
   align-items: center;
   display: flex;
+  gap: 15px;
   flex-direction: column;
 }
 
-.totalPrice {
-  color: black;
-}
-
 .navItem {
-  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }

@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import { CartFunctionContext } from "../../context/CartFunctionContext"
+import { PlusSquareIcon, MinusSquareIcon } from "@phosphor-icons/react"
 import styles from "./checkoutSummary.module.css"
+import ReturnButton from "../ReturnButton"
 
 const CheckoutSummary = () => {
   const {shoppingCart, addToCart, removeFromCart, cartTotal} = useContext(CartFunctionContext)
@@ -17,9 +19,13 @@ const CheckoutSummary = () => {
                   <p className={styles.checkoutItemName}>{product.name}</p>
                   <p className={styles.checkoutItemPrice}>{product.price * product.quantity}</p>
                   <div className={styles.itemQtyContainer}>
-                    <span className={styles.qtyToggle}>-</span>
+                    <span onClick={() => {removeFromCart(product)}}>
+                      <MinusSquareIcon className={styles.qtyToggle} size={18} />
+                    </span>
                     <div>{product.quantity}</div>
-                    <span>+</span>
+                    <span onClick={() => {addToCart(product)}}>
+                      <PlusSquareIcon className={styles.qtyToggle} size={18} />
+                    </span>
                   </div>
                   <span className={styles.checkoutItemRemove} onClick={() => {removeFromCart(product)}}>Remove</span>
                 </>
@@ -28,7 +34,10 @@ const CheckoutSummary = () => {
           </div>
         </div>
       </div>
-      <span className={styles.totalPrice}>{cartTotal}</span>
+      <div className={styles.totalPrice}>
+        <span>{cartTotal}</span>
+        <ReturnButton />
+      </div>
     </>
   )
 }

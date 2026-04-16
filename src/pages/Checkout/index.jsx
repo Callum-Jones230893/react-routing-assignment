@@ -1,8 +1,8 @@
 import CheckoutContent from "../../components/CheckoutContent"
 
-const Checkout = ({recommendedItems}) => {
+const Checkout = () => {
   return (
-    <CheckoutContent recommendedProducts={recommendedItems} />
+    <CheckoutContent />
   )
 }
 

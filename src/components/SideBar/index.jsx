@@ -23,10 +23,10 @@ const SideBar = () => {
           <div className={styles.sideBarItem}>placeholder for army icons</div>
         </div>
         <div className={styles.sideBarSection}>
-          <NavLink to={"/products"}>All Products</NavLink>
+          <NavLink className={styles.navItem} to={"/products"}>All Products</NavLink>
           {groupsArray.map(([key, value], index) => (
             <div className={`${styles.navItem} ${styles.sideBarItem}`} key={index}>
-              <NavLink to={`/products/${key}`}>{value[0].category}</NavLink>
+              <NavLink className={({ isActive }) => isActive ? `${styles.activeNav} ${styles.navItem}` : styles.navItem} to={`/products/${key.toLowerCase()}`}>{value[0].category}</NavLink>
               <span className={styles.productCount}>{value.length}</span>
             </div>
           ))}
@@ -37,7 +37,7 @@ const SideBar = () => {
         <div className={styles.sideBarSection}>
           <div className={styles.iconContainer}>
             {isCheckout
-              ? <NavLink to={"/checkout"}><ShoppingBagOpenIcon size={28}  className={styles.cartIcon} /></NavLink> 
+              ? <NavLink to={"/"}><ShoppingBagOpenIcon size={28}  className={styles.cartIcon} /></NavLink> 
               : <NavLink to={"/checkout"}><ShoppingBagIcon size={28}  className={styles.cartIcon} /></NavLink>
             }
             {/* <UserCircleIcon size={32} className={styles.loginIcon} /> */}

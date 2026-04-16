@@ -3,12 +3,23 @@
   width: 80%;
 }
 
+.displayWrapper h3 {
+  color: var(--font-four);
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
 .displayInnerWrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 35px;
   margin-bottom: 32px;
   width: 100%;
+}
+
+@media (max-width: 1200px) {
+  
 }
 
 @media (max-width: 768px) {

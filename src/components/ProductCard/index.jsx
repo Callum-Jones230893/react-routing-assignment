@@ -1,12 +1,10 @@
 import { useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { CartFunctionContext } from "../../context/CartFunctionContext"
-// import useViewedProducts from "../../hooks/useViewedProducts"
 import styles from "./productCard.module.css"
 
 const ProductCard = ({product}) => {
   const {addToCart} = useContext(CartFunctionContext)
-  // const {recommended} = useViewedProducts()
 
   return (
     <div className={styles.productCard}>
@@ -18,7 +16,7 @@ const ProductCard = ({product}) => {
       <div className={styles.bottom}>
         <div className={styles.bottomDiv}>
           <p>{product.name}</p>
-          <p>{product.price} SEK</p>
+          <p>{product.price} :-</p>
           <span onClick={() => addToCart(product)}>Add to cart</span>
           <NavLink className={styles.productNav} to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
         </div>

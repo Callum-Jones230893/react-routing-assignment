@@ -1,12 +1,12 @@
 import styles from "./checkoutContent.module.css"
 import CheckoutSummary from "../CheckoutSummary"
-import RecommendedItems from "../RecommendedItems"
+import ProductDisplay from "../ProductDisplay"
 
-const CheckoutContent = ({recommendedProducts}) => {
+const CheckoutContent = () => {
   return (
     <div className={styles.checkoutWrapper}>
       <CheckoutSummary />
-      <RecommendedItems recommended={recommendedProducts} />
+      <ProductDisplay />
     </div>
   )
 }
