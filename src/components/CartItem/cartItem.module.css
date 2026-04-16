@@ -1,8 +1,8 @@
 .cartItemWrapper {
   align-items: center;
   color: var(--font-four);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   letter-spacing: 1px;
   padding: 10px;
 }
