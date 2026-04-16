@@ -20,9 +20,6 @@ const SideBar = () => {
     <div className={styles.sideBarWrapper}>
       <div className={styles.sideBarContent}>
         <div className={styles.sideBarSection}>
-          <div className={styles.sideBarItem}>placeholder for army icons</div>
-        </div>
-        <div className={styles.sideBarSection}>
           <NavLink className={styles.navItem} to={"/products"}>All Products</NavLink>
           {groupsArray.map(([key, value], index) => (
             <div className={`${styles.navItem} ${styles.sideBarItem}`} key={index}>

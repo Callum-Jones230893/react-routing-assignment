@@ -23,7 +23,7 @@ const Hero = ({hero}) => {
               <h3 className={styles.newItemsContents}>Contents</h3>
               <p className={styles.heroContents}>{product.contents}</p>
             </div>
-            <NavLink className={styles.productNav} to={`/products/${product.category}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
+            <NavLink className={styles.productNav} to={`/products/${product.category.toLowerCase()}/${product.name.toLowerCase().replace(/\s+/g, '')}`}>Read More</NavLink>
           </div>
       </div>
       ))}
