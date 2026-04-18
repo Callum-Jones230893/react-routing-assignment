@@ -1,14 +1,23 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom"; 
 
 const useNav = () => {
   const [displayCart, setDisplayCart] = useState(false)
   const [displayMenu, setDisplayMenu] = useState(false)
   const [displaySubMenu, setDisplaySubMenu] = useState(false)
 
+  const location = useLocation();
+
   useEffect(() => {
     document.body.style.overflow =  displayMenu || displayCart ? "hidden" : "unset"
     return () => { document.body.style.overflow = "unset"}
   }, [displayMenu, displayCart])
+
+  useEffect(() => {
+    setDisplayCart(false)
+    setDisplayMenu(false)
+    setDisplaySubMenu(false)
+  }, [location])
 
   const showCart = () => {
     setDisplayCart(!displayCart)
