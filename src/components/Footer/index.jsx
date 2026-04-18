@@ -3,7 +3,7 @@ import styles from "./footer.module.css"
 const Footer = () => {
 return (
     <footer className={styles.footerWrapper}>
-      <p>footer</p>
+      <p>The Warpstone Emporium</p>
     </footer>
   )
 }
