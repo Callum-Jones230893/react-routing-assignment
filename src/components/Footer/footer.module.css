@@ -2,6 +2,7 @@
   align-items: center;
   background: var(--background-one);
   border-top: 1px solid var(--border-two);
+  color: var(--font-six);
   display: flex;
   height: 60px;
   justify-content: center;

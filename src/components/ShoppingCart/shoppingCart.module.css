@@ -9,10 +9,11 @@
   border-left: 1px solid var(--background-one);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100vh - 100px);
   gap: 5px;
   justify-content: space-evenly;
   right: 0px;
+  overflow-y: scroll;
   position: fixed;
   top: 100px;
   width: 25%;
@@ -39,8 +40,9 @@
   color: var(--font-three);
   align-items: center;
   display: flex;
-  gap: 15px;
   flex-direction: column;
+  gap: 15px;
+  padding-bottom: 15px;
 }
 
 .navItem {
