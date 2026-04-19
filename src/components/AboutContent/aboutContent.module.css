@@ -10,6 +10,12 @@
   width: 40%;
 }
 
+@media (max-width: 768px) {
+  .aboutMainWrapper {
+    width: 60%;
+  }
+}
+
 .aboutTitle {
   color: var(--font-four);
   font-style: italic;
