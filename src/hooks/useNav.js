@@ -38,6 +38,8 @@ const useNav = () => {
     displayCart,
     displayMenu,
     displaySubMenu,
+    setDisplaySubMenu,
+    setDisplayMenu,
     showCart,
     showMenu,
     showSubMenu

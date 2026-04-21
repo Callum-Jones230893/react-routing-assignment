@@ -35,6 +35,7 @@
     top: 72px;
     transition:max-height 400ms ease-in-out;
     width: 100vw;
+    z-index: 10;
   }
 
   .navItemWrapper {
@@ -50,6 +51,15 @@
 
   .displayDropDown {
     max-height: 1000px;
+  }
+
+  .dropDownOverlay {
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
   }
 }
 

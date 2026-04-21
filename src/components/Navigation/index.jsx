@@ -7,7 +7,7 @@ import DropDownMenu from "../DropDownMenu";
 import ShoppingCart from "../ShoppingCart";
 
 const Navigation = () => {
-  const {displayCart, displayMenu, displaySubMenu, showCart, showMenu, showSubMenu} = useNav();
+  const {displayCart, displayMenu, displaySubMenu, setDisplaySubMenu, setDisplayMenu, showCart, showMenu, showSubMenu} = useNav();
 
   return (
     <>
@@ -28,6 +28,8 @@ const Navigation = () => {
         menuDisplay={displayMenu}
         toggleMenu={showMenu}
         toggleSubMenu={showSubMenu}
+        updateMenu={setDisplayMenu}
+        updateSubMenu={setDisplaySubMenu}
       />
     </>
   )
