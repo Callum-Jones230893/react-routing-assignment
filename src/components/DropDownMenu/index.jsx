@@ -7,8 +7,8 @@ import DropDownSubMenu from "../DropDownSubMenu"
 const DropDownMenu = ({menuDisplay, toggleMenu, toggleSubMenu, displaySub, updateMenu, updateSubMenu}) => {
 
   const closeMenu = () => {
-    updateMenu(!menuDisplay)
-    updateSubMenu(!displaySub)
+    updateMenu(false)
+    updateSubMenu(false)
   }
 
   return (
