@@ -4,11 +4,18 @@ import { CartFunctionContext } from "../../context/CartFunctionContext"
 import styles from "./shoppingCart.module.css"
 import CartItem from "../CartItem"
 
-const ShoppingCart = ({displayed}) => {
+const ShoppingCart = ({displayed, updateDisplayed}) => {
   const {cartTotal} = useContext(CartFunctionContext)
+
+  const closeMenu = () => {
+    updateDisplayed(false)
+  }
 
   return (
     <div className={styles.shoppingCartWrapper}>
+      {displayed && (
+        <div className={styles.cartOverlay} onClick={closeMenu}></div>
+      )}
       <div className={`${styles.shoppingCartContent} ${displayed ? styles.displayCart : ``}`}>
         <CartItem />
         <div className={styles.checkoutWrapper}>

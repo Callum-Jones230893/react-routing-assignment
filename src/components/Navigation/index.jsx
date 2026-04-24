@@ -7,7 +7,16 @@ import DropDownMenu from "../DropDownMenu";
 import ShoppingCart from "../ShoppingCart";
 
 const Navigation = () => {
-  const {displayCart, displayMenu, displaySubMenu, setDisplaySubMenu, setDisplayMenu, showCart, showMenu, showSubMenu} = useNav();
+  const {
+    displayCart, 
+    displayMenu, 
+    displaySubMenu, 
+    setDisplaySubMenu, 
+    setDisplayMenu, 
+    showCart, showMenu, 
+    showSubMenu, 
+    setDisplayCart
+  } = useNav();
 
   return (
     <>
@@ -20,7 +29,7 @@ const Navigation = () => {
         <div>
           {!displayCart ? <ShoppingBagIcon size={28}  className={styles.cartIcon} onClick={showCart} />
                         : <ShoppingBagOpenIcon size={28} className={styles.cartIcon} onClick={showCart} />}
-          <ShoppingCart displayed={displayCart} />
+          <ShoppingCart displayed={displayCart} updateDisplayed={setDisplayCart} />
         </div>
       </nav>
       <DropDownMenu
