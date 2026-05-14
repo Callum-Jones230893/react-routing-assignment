@@ -33,7 +33,7 @@ const useViewedProducts = () => {
 
   for (const path of viewed) {
     const category = path.split("/")[2]
-
+    console.log("category extracted:", path.split("/")[2])
     if (category) {
       categoryCount[category] = (categoryCount[category] || 0) + 1
     }
@@ -63,11 +63,11 @@ const useViewedProducts = () => {
   const { allProductsArray } = useContext(AllProductContext)
   
   const mostViewedFilter = mostViewedCategory
-    ? allProductsArray.filter(product => product.category === mostViewedCategory)
+    ? allProductsArray.filter(product => product.category.toLowerCase() === mostViewedCategory)
     : allProductsArray
 
   const secondMostFilter = secondMostViewedCategory
-    ? allProductsArray.filter(product => product.category === secondMostViewedCategory)
+    ? allProductsArray.filter(product => product.category.toLowerCase() === secondMostViewedCategory)
     : allProductsArray
 
   useEffect(() => {
@@ -85,8 +85,8 @@ const useViewedProducts = () => {
     setRecommended([...mostLooked, ...secondLooked])
   }, [mostViewedCategory, secondMostViewedCategory, allProductsArray])
 
-
   return {recommended}
 }
+
 
 export default useViewedProducts
